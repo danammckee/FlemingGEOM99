@@ -10,9 +10,7 @@ more cross-browser friendly-->
 <html>
   <head>
     <title>Simple Map</title>
-    <link rel="stylesheet" href="https://danammckee.github.io/FlemingGEOM99/mainstyle.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-	  
     <!--Loading the Google Maps JavaScript API so your page can actually get at it-->
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA&callback=initMap&libraries=&v=weekly"
@@ -41,35 +39,16 @@ more cross-browser friendly-->
       function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
           center: { lat: 51.463612, lng: -112.719444 },
-          zoom: 13,
+          zoom: 12,
         });
       }
     </script>
   </head>
   <body>
       <!--Your page will end up down here-->
-	  
-    <!-- Title Block -->
-<!-- Title name and slogan -->
-    <div class="titleblock">
-        <h1 class ="title">GEOM99 - Web GIS Development</h1>
-        <p class ="subtitle">Semester Tasks</p>
-    </div>
-
-    <!--<div class="section>
-	<h2 class ="titles"> Drumheller, AB</h2>
-	<p class ="words"> Drumheller, AB is famous for hoodoos, a unquie heritage, and of course dinosaurs.  
-			 Named, the dinosaur capital of the world, Drumheller is a place not to be missed in your lifetime.</p>
-				   
-	  
-    <div id="map"></div>-->
-    
-    <!-- Create footer for webpage with link to w3schools -->
-    <div class="footer">
-	    <p class ="footertext">2021 Dana McKee GEOM 99  |  Created with 
-	    <a href="https://www.google.com/earth/outreach/learn/visualize-your-data-on-a-custom-map-using-google-my-maps/" target="_blank">Google MyMaps</a>  |  Data provided by The MAPA Project and Shark Spotters</p>
-	    <p class ="footertext2"> <a href="https://danammckee.github.io/FlemingGEOM99/home.html" target="_blank">Home</a> </p>
-  </div>
+    <div id="map"></div>
+  </body>
+</html>
     
   </body>
 </html>
