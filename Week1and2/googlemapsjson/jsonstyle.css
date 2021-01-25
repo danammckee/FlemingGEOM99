@@ -1,12 +1,11 @@
-/* Set the body font CSS for the entire webpage [Dana McKee]
+/* Set the body font CSS for the entire webpage [Dana McKee]*/
 * {
   box-sizing: border-box;
 }
 
 body {
     	font-family: 'Hind', sans-serif;
-	height: 100%;
-} */
+} 
 
 /* Style the header */
 .titleblock {
