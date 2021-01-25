@@ -1,6 +1,6 @@
 /* Set the body font CSS for the entire webpage [Dana McKee]*/
 * {
-  box-sizing: border-box;
+  padding: 20px;
 }
 
 body {
