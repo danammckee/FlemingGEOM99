@@ -1,0 +1,49 @@
+<!-- Add a sim[pe Google Map with a marker to a webpage-->
+<!-- Creating the HTML page - START -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Map</title>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <style type="text/css">
+      /* Set the size of the div element that contains the map */
+      /* The CSS that sets the size and colour of the div*/
+      #map {
+        height: 800px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+      }
+    </style>
+    <script>
+      // Initialize and add the map when webpage loads with init function
+      // Script tag above to include JS and contains the initMAP function
+      function initMap() {
+        // The location of Uluru
+        const royaltyrrellmuseum = { lat: 51.4792, lng: -112.7901 };
+        // The map, centered at Uluru
+        // document.getElementByID() function finds the map div on the webpage
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 15,
+          center: royaltyrrellmuseum,
+        });
+        // The marker, positioned at Royal Tyrrell Museum
+        const marker = new google.maps.Marker({
+          position: royaltyrrellmuseum,
+          map: map,
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <h3> Royal Tyrrell Museum</h3>
+    <!--The div element for the map -->
+    <!--This code defines an area of a page for your Google Map -->
+    <div id="map"></div>
+  </body>
+</html>
+<!-- Creating the HTML page - END -->
