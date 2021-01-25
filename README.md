@@ -11,7 +11,7 @@
 ## **Task 2: Google MyMaps**
 
 * Visualize data and create a custom map using Google MyMaps.
-* [Shark Spotters Google MyMaps](https://danammckee.github.io/googlemapsharkspotting/index.html)
+* [Shark Spotters Google MyMaps](https://danammckee.github.io/FlemingGEOM99/Week1and2/MyMaps/googlemapsharkspotting.html)
 
 ## **Task 3: Google Maps As a Development Platform**
 
@@ -21,14 +21,14 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
 
 * Create the Overview (hellow world) example. 
 * Location set to Drumheller, AB
-* Check out the location [HERE](https://danammckee.github.io/googlemapsjson/helloworld.html)
-  * https://danammckee.github.io/googlemapsjson/helloworld.html 
+* Check out the location [HERE](https://danammckee.github.io/FlemingGEOM99/Week1and2/googlemapsjson/helloworld.html)
+  * https://danammckee.github.io/FlemingGEOM99/Week1and2/googlemapsjson/helloworld.htmll 
 
 ### **Directions API (JSON Return)**
 
 * Follow instructions for directions and form a URL to provide route directions in JSON
 * Directions from Royal Tyrrell Museum to Hoodoos Trail 
-* Get Directions: [HERE](https://maps.googleapis.com/maps/api/directions/json?origin=Royal+Tyrrell+Museum&destination=Hoodoos+Trail&key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA)
+* Get Directions: [HERE](https://danammckee.github.io/FlemingGEOM99/Week1and2/googlemapsjson/directionsAPI.html)
   * https://maps.googleapis.com/maps/api/directions/json?origin=Royal+Tyrrell+Museum&destination=Hoodoos+Trail&key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA
 
 
@@ -36,7 +36,7 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
 
 * Get a Places details URL working to return a JSON response
 * Royal Tyrrell Museum 
-* Check out information about Royal Tyrrell Museum [HERE](https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJy38C1IcSc1MR1Bh0FOdJtRI&fields=name,address_component,formatted_address,rating,formatted_phone_number,opening_hours,website,photo,reviews&key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA)
+* Check out information about Royal Tyrrell Museum [HERE](https://danammckee.github.io/FlemingGEOM99/Week1and2/googlemapsjson/placesAPI.html)
   * https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJy38C1IcSc1MR1Bh0FOdJtRI&fields=name,address_component,formatted_address,rating,formatted_phone_number,opening_hours,website,photo,reviews&key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA 
 
 ## **Task 4: Google Javascript API**
@@ -57,12 +57,12 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
 
 * Visualize data on Google maps using various techniques. 
 * Earthquakes
-  * [Basic Markers](https://danammckee.github.io/GMaps/tutorial3a.html)
-    * https://danammckee.github.io/GMaps/tutorial3a.html
-  * [Sized Circles](https://danammckee.github.io/GMaps/tutorial3b.html)
-    * https://danammckee.github.io/GMaps/tutorial3b.html
-  * [Heatmap](https://danammckee.github.io/GMaps/tutorial3c.html)
-    * https://danammckee.github.io/GMaps/tutorial3c.html
+  * [Basic Markers](https://danammckee.github.io/FlemingGEOM99/Week1and2/GMaps/tutorial3a.html)
+    * https://danammckee.github.io/FlemingGEOM99/Week1and2/GMaps/tutorial3a.html
+  * [Sized Circles](https://danammckee.github.io/FlemingGEOM99/Week1and2/GMaps/tutorial3b.html)
+    * https://danammckee.github.io/FlemingGEOM99/Week1and2/GMaps/tutorial3b.html
+  * [Heatmap](https://danammckee.github.io/FlemingGEOM99/Week1and2/GMaps/tutorial3c.html)
+    * https://danammckee.github.io/FlemingGEOM99/Week1and2/GMaps/tutorial3c.html
 
 ## **Task 5 - Create a Single HTML5 Page Using Google Map Technology**
 
