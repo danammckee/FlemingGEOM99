@@ -57,4 +57,4 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
 
 ## **Task 5 - Create a Single HTML5 Page Using Google Map Technology**
 
-* (Ski Hills)[https://danammckee.github.io/northamericanskihills/index.html)
+* [Ski Hills](https://danammckee.github.io/northamericanskihills/index.html)
