@@ -1,0 +1,51 @@
+<!--GOOGLE: JavaScript API HTML Interactive Map-->
+<!--Over (hello world) example and host in Github-->
+<!-- https://danammckee.github.io/googlemapsjson.github.io/index.html -->
+<!-- https://developers.google.com/maps/documentation/javascript/overview#all 
+https://developers.google.com/maps/documentation/javascript/reference#maps -->
+
+<!--Declare as true DOCTYPE; HTML5 DOCTYPE for applications; "standard mode"; 
+more cross-browser friendly-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!--Loading the Google Maps JavaScript API so your page can actually get at it-->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <!--Need to have heights specified! Or won't have a map!-->
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. Otherwise is zero pixels tall */
+      #map {
+        height: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <!--Is creating the map variable-->
+    <script>
+      let map;
+        /*the document.GetElementbyID is getting at the map down below*/
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 51.463612, lng: -112.719444 },
+          zoom: 12,
+        });
+      }
+    </script>
+  </head>
+  <body>
+      <!--Your page will end up down here-->
+    <div id="map"></div>
+  </body>
+</html>
