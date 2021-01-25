@@ -138,7 +138,6 @@ p {
 /* Set up Footer text CSS [Dana McKee]*/
 .footertext {
 	position: relative;
-	font-style: italic;
 	color: white;
 	text-align: center;
 	padding: 1px;
