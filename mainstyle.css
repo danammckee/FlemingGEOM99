@@ -47,7 +47,15 @@ p {
 /* Set up Footer text CSS [Dana McKee]*/
 .footertext {
 	position: relative;
-	font-style: italic;
+	color: white;
+	text-align: center;
+	padding: 1px;
+}
+
+.footertext {
+	position: relative;
+	font-size: 30px;
+	font-weight: bold;
 	color: white;
 	text-align: center;
 	padding: 1px;
