@@ -18,11 +18,11 @@ body {
   margin-bottom: 10px;
 }
 
-h1 {
+.title {
 	font-size: 70px;
 }
 
-p {
+.subtitle {
 	font-size: 20px;
 }
 
