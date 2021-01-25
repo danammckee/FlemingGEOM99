@@ -1,6 +1,6 @@
-# **Fleming College: GEOM99 Web GIS Development**
+# **Fleming College: [GEOM99 Web GIS Development](https://danammckee.github.io/FlemingGEOM99/home.html)**
 
-## **Weeks 1-2 Coursework**
+## **[Weeks 1-2 Coursework](https://danammckee.github.io/FlemingGEOM99/Week1and2/index.html)**
 
 ## **Task 1: Review of Google Maps Platform Blogs**
 
