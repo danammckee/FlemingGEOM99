@@ -22,12 +22,12 @@ body {
   margin-top: 1%;
 }
 
-h1 {
+.title {
 	font-size: 70px;
 }
 
-p {
-	font-size: 20px;
+.subtitle {
+	font-size: 30px;
 }
 
 /* Set up Footer block CSS to be set to the bottom of the page and not underlay vertival side nav bar [Dana McKee]*/
