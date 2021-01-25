@@ -19,7 +19,7 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
 
 ### **JavaScript API (HTML Interactive Map)**
 
-* Create the Overview (hellow world) example. 
+* Create the Overview (hello world) example. 
 * Location set to Drumheller, AB
 * Check out the location [HERE](https://danammckee.github.io/FlemingGEOM99/Week1and2/googlemapsjson/helloworld.html)
   * https://danammckee.github.io/FlemingGEOM99/Week1and2/googlemapsjson/helloworld.htmll 
