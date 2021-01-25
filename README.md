@@ -30,6 +30,8 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
 * Directions from Royal Tyrrell Museum to Hoodoos Trail 
 * Get Directions: [HERE](https://maps.googleapis.com/maps/api/directions/json?origin=Royal+Tyrrell+Museum&destination=Hoodoos+Trail&key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA)
   * (https://maps.googleapis.com/maps/api/directions/json?origin=Royal+Tyrrell+Museum&destination=Hoodoos+Trail&key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA)
+  * http://github.com - automatic!
+  * [GitHub](http://github.com)
 
 ### **Places API (JSON Return)**
 
