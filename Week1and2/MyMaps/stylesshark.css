@@ -1,0 +1,152 @@
+/* Set the body font CSS for the entire webpage [Dana McKee]*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+    	font-family: 'Hind', sans-serif;
+	height: 100%;
+}
+
+/* 	font-family: "Lucida Console", "Courier New", monospace;
+"Veranda", "Monaco", "Yusei Magic", "Avantgarde" ; */
+
+/* Style the header */
+.titleblock {
+  background-color: rgb(42, 160, 160);
+  padding: 30px;
+  text-align: center;
+  font-size: 45px;
+  color: white;
+  margin-top: 1%;
+}
+
+h1 {
+	font-size: 100px;
+}
+
+
+/*  Horizontal nav bar with light gray background and a thin border
+Reference: https://www.w3schools.com/css/css_navbar.asp */
+nav {
+  overflow: hidden;
+  background-color: LightGray;
+  border: 3px solid #686868;
+  margin-top: 10px;
+  margin-bottom: 10px;
+} 
+
+/* Link text to the left, small padding around it */
+li a {
+  float: left;
+  display: block;
+  color: Black;
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+}
+
+/* nav bar link text styling, bold */
+ul {
+  list-style-type: none;
+  font-family: Yusei Magic, Avantgarde, Veranda, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+/* This allows the colour to change to another colour as the user is hovering on ofn of the nav bar links */
+li a:hover {
+  background-color: rgb(42, 160, 160);
+  color: black;
+}
+
+.map {
+	width: 100px;
+}
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss_css_image_overlay_fade*/
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(42, 160, 160);
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+h2 {
+	text-decoration: underline;
+	text-decoration-color: rgb(42, 160, 160);
+}
+
+p {
+	font-family: 'Hind', sans-serif;
+}
+
+.divided {
+  display: flex;
+  margin-bottom: 30px;
+} 
+
+/* Set up Footer block CSS to be set to the bottom of the page and not underlay vertival side nav bar [Dana McKee]*/
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    letter-spacing: 0.11em;
+    margin-top: 100px;
+    margin-bottom: 1%;
+    background-color: rgb(49, 153, 167);
+    padding: 4px 0 4px 0;
+}
+
+/* START: FOOTER CSS [Dana McKee] */
+/* Set up Footer text CSS [Dana McKee]*/
+.footertext {
+	position: relative;
+	font-style: italic;
+	color: white;
+	text-align: center;
+	padding: 1px;
+}
+
+
+@media (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
