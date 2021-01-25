@@ -16,6 +16,7 @@ body {
   font-size: 45px;
   color: white;
   margin-top: 1%;
+  margin-bottom: 1px;
 }
 
 h1 {
@@ -36,7 +37,7 @@ p {
     margin-top: 100px;
     margin-bottom: 1%;
     background-color: rgb(49, 153, 167);
-    padding: 4px 0 4px 0;
+    padding: 1px 0 1px 0;
 }
 
 /* START: FOOTER CSS [Dana McKee] */
