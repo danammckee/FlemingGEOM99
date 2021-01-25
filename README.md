@@ -29,9 +29,8 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
 * Follow instructions for directions and form a URL to provide route directions in JSON
 * Directions from Royal Tyrrell Museum to Hoodoos Trail 
 * Get Directions: [HERE](https://maps.googleapis.com/maps/api/directions/json?origin=Royal+Tyrrell+Museum&destination=Hoodoos+Trail&key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA)
-  * (https://maps.googleapis.com/maps/api/directions/json?origin=Royal+Tyrrell+Museum&destination=Hoodoos+Trail&key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA)
-  * http://github.com - automatic!
-  * [GitHub](http://github.com)
+  * https://maps.googleapis.com/maps/api/directions/json?origin=Royal+Tyrrell+Museum&destination=Hoodoos+Trail&key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA
+
 
 ### **Places API (JSON Return)**
 
@@ -46,20 +45,26 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
 
 * Add a simple Google map with a marker to a webpage
 * [Royal Tyrrell Museum](https://danammckee.github.io/GMaps/tutorial1.html)
+  * https://danammckee.github.io/GMaps/tutorial1.html
 
 ### **Tutorial 2 - Marker Clustering**
 
 * Use marker clusters to diaplay a large number of markers on a map
 * [Ontario Provincial Parls](https://danammckee.github.io/GMaps/tutorial2.html)
+  * https://danammckee.github.io/GMaps/tutorial2.html
 
 ### **Tutorial 3 - Earthquakes: Basic Markers, Sized Circles, Heatmap**
 
 * Visualize data on Google maps using various techniques. 
 * Earthquakes
   * [Basic Markers](https://danammckee.github.io/GMaps/tutorial3a.html)
+    * https://danammckee.github.io/GMaps/tutorial3a.html
   * [Sized Circles](https://danammckee.github.io/GMaps/tutorial3b.html)
+    * https://danammckee.github.io/GMaps/tutorial3b.html
   * [Heatmap](https://danammckee.github.io/GMaps/tutorial3c.html)
+    * https://danammckee.github.io/GMaps/tutorial3c.html
 
 ## **Task 5 - Create a Single HTML5 Page Using Google Map Technology**
 
 * [Ski Hills](https://danammckee.github.io/northamericanskihills/index.html)
+  * https://danammckee.github.io/northamericanskihills/index.html
