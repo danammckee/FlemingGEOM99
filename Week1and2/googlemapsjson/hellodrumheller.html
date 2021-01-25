@@ -9,8 +9,10 @@ more cross-browser friendly-->
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Map</title>
+    <title>Simple Map - Drumheller, AB </title>
+    <link rel="stylesheet" href="mainstyle.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    
     <!--Loading the Google Maps JavaScript API so your page can actually get at it-->
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA&callback=initMap&libraries=&v=weekly"
@@ -42,10 +44,23 @@ more cross-browser friendly-->
           zoom: 12,
         });
       }
-    </script>
+    </script>    
   </head>
+  
   <body>
       <!--Your page will end up down here-->
+    <div class="titleblock">
+       <h1 class ="title">GEOM99 - Web GIS Development</h1>
+       <p class="subtitle">Lab Tasks</p>
+    </div>
+    
+    
     <div id="map"></div>
+    
+    <div class="footer">
+	     <p class ="footertext">2021 Dana McKee | <a href="https://danammckee.github.io/FlemingGEOM99/home.html" target="_blank">Home</a>  |  GEOM99 Web GIS Development</p>
+	     <p class ="footertext"> <a href="https://danammckee.github.io/FlemingGEOM99/home.html" target="_blank">Home</a> </p>
+    </div>
+    
   </body>
 </html>
