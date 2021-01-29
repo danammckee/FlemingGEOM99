@@ -13,14 +13,13 @@ body {
   background-color: rgb(42, 160, 160);
   padding: 30px;
   text-align: center;
-  font-size: 45px;
   color: white;
   margin-top: 1%;
   margin-bottom: 10px;
 }
 
 .title {
-	font-size: 70px;
+	font-size: 50px;
 }
 
 .subtitle {
