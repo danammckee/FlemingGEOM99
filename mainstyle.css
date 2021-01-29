@@ -35,6 +35,11 @@ body {
 	text-decoration-color: rgb(42, 160, 160);
 }
 
+.mapDiv {
+	margin-right: auto;
+	margin-left: auto;
+}
+
 /*  Horizontal nav bar with light gray background and a thin border
 Reference: https://www.w3schools.com/css/css_navbar.asp */
 .nav {
