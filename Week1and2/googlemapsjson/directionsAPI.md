@@ -6,7 +6,7 @@
   * https://maps.googleapis.com/maps/api/directions/json?origin=Royal+Tyrrell+Museum&destination=Hoodoos+Trail&key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA
   
   ### JSON Return
-  '''
+  ```json
   {
    "geocoded_waypoints" : [
       {
@@ -547,5 +547,5 @@
       }
    ],
    "status" : "OK"
-} '''
+}
   
