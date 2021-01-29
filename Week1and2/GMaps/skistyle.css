@@ -1,0 +1,66 @@
+/* Set the body font CSS for the entire webpage [Dana McKee]*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+    	font-family: 'Hind', sans-serif;
+	height: 100%;
+}
+
+/* Style the header */
+.titleblock {
+  background-color: rgb(42, 160, 160);
+  padding: 30px;
+  text-align: center;
+  font-size: 45px;
+  color: white;
+  margin-top: 1%;
+  margin-bottom: 10px;
+}
+
+.title {
+	font-size: 70px;
+}
+
+.subtitle {
+	font-size: 30px;
+}
+
+/* Set up Footer block CSS to be set to the bottom of the page and not underlay vertival side nav bar [Dana McKee]*/
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    letter-spacing: 0.11em;
+    margin-top: 10px;
+    margin-bottom: 1%;
+    background-color: rgb(49, 153, 167);
+    padding: 4px 0 4px 0;
+}
+
+/* START: FOOTER CSS [Dana McKee] */
+/* Set up Footer text CSS [Dana McKee]*/
+.footertext {
+	position: relative;
+	color: white;
+	text-align: center;
+	padding: 1px;
+}
+
+.footertext2 {
+	position: relative;
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	padding: 1px;
+}
+
+
+@media (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
