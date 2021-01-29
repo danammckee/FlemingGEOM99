@@ -61,6 +61,9 @@ li a:hover {
   color: black;
 }
 
+/* ul.b {
+  list-style-type: square;
+} */
 
 /* Set up Footer block CSS to be set to the bottom of the page and not underlay vertival side nav bar [Dana McKee]*/
 .footer {
