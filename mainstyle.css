@@ -55,6 +55,39 @@ ul {
   margin: 0;
 }*/
 
+nav {
+  overflow: hidden;
+  background-color: LightGray;
+  border: 3px solid #686868;
+  margin-top: 10px;
+  margin-bottom: 10px;
+} 
+
+/* Link text to the left, small padding around it */
+li a {
+  float: left;
+  display: block;
+  color: Black;
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+}
+
+/* nav bar link text styling, bold */
+ul {
+  list-style-type: none;
+  font-family: Yusei Magic, Avantgarde, Veranda, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+/* This allows the colour to change to another colour as the user is hovering on ofn of the nav bar links */
+li a:hover {
+  background-color: rgb(42, 160, 160);
+  color: black;
+}
+
 /* This allows the colour to change to another colour as the user is hovering on ofn of the nav bar links */
 li a:hover {
   background-color: rgb(42, 160, 160);
