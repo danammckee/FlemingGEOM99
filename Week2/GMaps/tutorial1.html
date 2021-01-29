@@ -1,0 +1,61 @@
+<!-- Add a sim[pe Google Map with a marker to a webpage-->
+<!-- Creating the HTML page - START -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Map</title>
+    <link rel="stylesheet" href="https://danammckee.github.io/FlemingGEOM99/mainstyle.css">
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <style type="text/css">
+      /* Set the size of the div element that contains the map */
+      /* The CSS that sets the size and colour of the div*/
+      #map {
+        height: 800px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+      }
+    </style>
+    <script>
+      // Initialize and add the map when webpage loads with init function
+      // Script tag above to include JS and contains the initMAP function
+      function initMap() {
+        // The location of Uluru
+        const royaltyrrellmuseum = { lat: 51.4792, lng: -112.7901 };
+        // The map, centered at Uluru
+        // document.getElementByID() function finds the map div on the webpage
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 15,
+          center: royaltyrrellmuseum,
+        });
+        // The marker, positioned at Royal Tyrrell Museum
+        const marker = new google.maps.Marker({
+          position: royaltyrrellmuseum,
+          map: map,
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Title Block -->
+    <!-- Title name and slogan -->
+    <div class="titleblock">
+      <h1 class ="title">GEOM99 - Web GIS Development</h1>
+      <p class ="subtitle">Basic Marker</p>
+    </div>
+    
+    <!--The div element for the map -->
+    <!--This code defines an area of a page for your Google Map -->
+    <div id="map"></div>
+    
+    <div class="footer">
+	    <p class ="footertext">2021 Dana McKee |  GEOM99 Web GIS Development</p>
+	    <p class ="footertext2"> <a href="https://danammckee.github.io/FlemingGEOM99/Week1and2/index.html" target="_blank">Return to Week 1 and 2</a> </p>
+    </div>
+    
+  </body>
+</html>
+<!-- Creating the HTML page - END -->
