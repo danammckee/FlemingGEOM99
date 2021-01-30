@@ -55,6 +55,7 @@ body {
 .mapDiv {
 	margin-right: auto;
 	margin-left: auto;
+	margin-bottom: 20px;
 }
 
 /*  Horizontal nav bar with light gray background and a thin border
