@@ -7,8 +7,6 @@ body {
     	font-family: 'Hind', sans-serif;
 	height: 100%;
 	width: 100%;
-	margin-right: 10px;
-	margin-left: 10px;
 }
 
 /* Style the header */
@@ -126,7 +124,7 @@ li a:hover {
 	
 .image {
 	display: block;
-	max-width: 100%;
+	max-width: 50%;
 	height: auto;
 	margin-top: 50px;
 	margin-right: auto;
