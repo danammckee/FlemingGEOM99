@@ -93,7 +93,7 @@ li a:hover {
 	margin-left: auto;
 }
 
-.overlay {
+/*.overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -118,7 +118,7 @@ li a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-}
+} */
 
 /* Set up Footer block CSS to be set to the bottom of the page and not underlay vertival side nav bar [Dana McKee]*/
 .footer {
