@@ -13,18 +13,124 @@ body {
   background-color: rgb(42, 160, 160);
   padding: 30px;
   text-align: center;
-  font-size: 45px;
   color: white;
   margin-top: 1%;
   margin-bottom: 10px;
 }
 
 .title {
-	font-size: 70px;
+	font-size: 50px;
 }
 
 .subtitle {
 	font-size: 30px;
+}
+
+.sharktitle {
+	font-size: 60px;
+}
+
+.sharkheader {
+	text-decoration: underline;
+	text-decoration-color: rgb(42, 160, 160);
+	font-size: 30px;
+}
+
+.sharkwords {
+	font-size: 20px;
+}
+
+.section {
+	margin-right: 100pz;
+	margin-left: 100pz;
+} 
+
+.mapDiv {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/*  Horizontal nav bar with light gray background and a thin border
+Reference: https://www.w3schools.com/css/css_navbar.asp */
+.nav {
+  overflow: hidden;
+  background-color: LightGray;
+  border: 3px solid #686868;
+  margin-top: 10px;
+  margin-bottom: 10px;
+} 
+
+/* Link text to the left, small padding around it */
+li a {
+  float: left;
+  display: block;
+  color: Black;
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+}
+
+/* nav bar link text styling, bold */
+ul {
+  list-style-type: none;
+  font-family: Yusei Magic, Avantgarde, Veranda, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+/* This allows the colour to change to another colour as the user is hovering on ofn of the nav bar links */
+li a:hover {
+  background-color: rgb(42, 160, 160);
+  color: black;
+}
+
+/* ul.b {
+  list-style-type: square;
+} */
+
+.container {
+  position: relative;
+  width: 50%;
+  margin-left: 50%;
+  margin-bottom: 20px;
+}
+
+.image {
+	display: block;
+	max-width: 100%;
+	  margin-left: auto;
+  	margin-right: auto;
+	height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(49, 153, 167);
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /* Set up Footer block CSS to be set to the bottom of the page and not underlay vertival side nav bar [Dana McKee]*/
@@ -63,4 +169,3 @@ body {
   .column {
     width: 100%;
   }
-}
