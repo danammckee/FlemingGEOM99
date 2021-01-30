@@ -21,6 +21,7 @@ body {
 
 .title {
 	font-size: 50px;
+	letter-spacing: 0.11em;
 }
 
 
@@ -136,7 +137,7 @@ li a:hover {
   text-align: center;
 }
 
-/* Set up Footer block CSS to be set to the bottom of the page and not underlay vertival side nav bar [Dana McKee]*/
+/* Set up Footer block CSS to be set to the bottom of the page and not underlay vertival side nav bar [Dana McKee]
 .footer {
     position: relative;
     bottom: 0;
@@ -147,7 +148,24 @@ li a:hover {
     margin-bottom: 10%;
     background-color: rgb(49, 153, 167);
     padding: 4px 0 4px 0;
+}*/
+
+.footer {
+    position: relative;
+    letter-spacing: 0.11em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(49, 153, 167);
 }
+
+/* Style the header 
+.titleblock {
+  background-color: rgb(42, 160, 160);
+  padding: 30px;
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+}*/
 
 /* START: FOOTER CSS [Dana McKee] */
 /* Set up Footer text CSS [Dana McKee]*/
