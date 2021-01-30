@@ -35,6 +35,10 @@ body {
 	text-decoration-color: rgb(42, 160, 160);
 }
 
+.sharkwords {
+	font-size: 13px;
+}
+
 .mapDiv {
 	margin-right: auto;
 	margin-left: auto;
