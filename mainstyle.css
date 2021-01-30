@@ -37,8 +37,13 @@ body {
 }
 
 .sharkwords {
-	font-size: 15px;
+	font-size: 20px;
 }
+
+.section {
+	margin-right: 100pz;
+	margin-left: 100pz;
+} 
 
 .mapDiv {
 	margin-right: auto;
@@ -86,7 +91,7 @@ li a:hover {
 
 .image {
 	display: block;
-	max-width: 50%;
+	max-width: 100%;
 	height: auto;
 	margin-top: 50px;
 	margin-right: auto;
@@ -112,7 +117,7 @@ li a:hover {
 
 .text {
   color: white;
-  font-size: 20px;
+  font-size: 60px;
   position: absolute;
   top: 50%;
   left: 50%;
