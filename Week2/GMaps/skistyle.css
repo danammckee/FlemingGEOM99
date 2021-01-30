@@ -178,3 +178,10 @@ article{
 	text-aling: center;
 	width: 70%;
 }
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
