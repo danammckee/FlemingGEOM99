@@ -98,7 +98,7 @@ li a:hover {
 	margin-left: auto;
 }
 
-/*.overlay {
+.overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -111,9 +111,9 @@ li a:hover {
   background-color: rgb(42, 160, 160);
 }
 
-.container:hover .overlay {
+/*.container:hover .overlay {
   opacity: 1;
-}
+}*/
 
 .text {
   color: white;
