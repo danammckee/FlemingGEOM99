@@ -92,7 +92,9 @@ li a:hover {
 .container {
   position: relative;
   width: 50%;
+  margin-left: 50%;
 }
+
 .image {
 	display: block;
 	max-width: 75%;
