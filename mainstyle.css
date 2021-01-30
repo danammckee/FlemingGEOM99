@@ -111,9 +111,9 @@ li a:hover {
   background-color: rgb(42, 160, 160);
 }
 
-/*.container:hover .overlay {
+.container:hover .overlay {
   opacity: 1;
-}*/
+}
 
 .text {
   color: white;
