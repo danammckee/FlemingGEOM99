@@ -1,5 +1,7 @@
 /* Set the body font CSS for the entire webpage [Dana McKee]*/
-
+* {
+  box-sizing: border-box;
+}
 
 body {
     	font-family: 'Hind', sans-serif;
@@ -12,7 +14,6 @@ body {
 /* Style the header */
 .titleblock {
   background-color: rgb(42, 160, 160);
-  padding: 30px;
   text-align: center;
   color: white;
   margin-bottom: 10px;
