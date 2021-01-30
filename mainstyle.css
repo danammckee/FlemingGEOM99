@@ -22,9 +22,19 @@ body {
 	font-size: 50px;
 }
 
+.title2(
+	font-size: 80px;
+}
+
+
 .subtitle {
 	font-size: 30px;
 }
+
+.subtitle2 (
+	font-size: 40px;
+}
+
 
 .sharktitle {
 	font-size: 60px;
