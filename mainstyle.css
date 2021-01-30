@@ -36,10 +36,11 @@ body {
 .sharkheader {
 	text-decoration: underline;
 	text-decoration-color: rgb(42, 160, 160);
+	font-size: 30px;
 }
 
 .sharkwords {
-	font-size: 30px;
+	font-size: 15px;
 }
 
 .mapDiv {
