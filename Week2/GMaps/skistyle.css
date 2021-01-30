@@ -13,6 +13,7 @@ body {
 
 /* Style the header */
 .titleblock {
+  position: relative;
   background-color: rgb(42, 160, 160);
   text-align: center;
   color: white;
