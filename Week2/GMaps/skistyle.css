@@ -7,13 +7,13 @@ body {
     	font-family: 'Hind', sans-serif;
 	height: 100%;
 	width: 85%;
-	padding: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
 }
 
 /* Style the header */
 .titleblock {
   background-color: rgb(42, 160, 160);
-  padding: 30px;
   text-align: center;
   color: white;
   margin-bottom: 10px;
@@ -154,7 +154,6 @@ li a:hover {
     position: relative;
     letter-spacing: 0.11em;
     margin-top: 10px;
-    margin-bottom: 10px;
     background-color: rgb(49, 153, 167);
 }
 
