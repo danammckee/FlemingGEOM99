@@ -171,3 +171,10 @@ li a:hover {
   .column {
     width: 100%;
   }
+
+article{
+	float: left;
+	padding: 30px;
+	text-aling: center;
+	width: 70%;
+}
