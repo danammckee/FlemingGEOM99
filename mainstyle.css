@@ -6,6 +6,7 @@
 body {
     	font-family: 'Hind', sans-serif;
 	height: 100%;
+	width: 100%;
 }
 
 /* Style the header */
@@ -119,3 +120,39 @@ li a:hover {
   .column {
     width: 100%;
   }
+	
+.image {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(42, 160, 160);
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
