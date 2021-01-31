@@ -21,8 +21,11 @@
       }
 
       body {
-            font-family: 'Hind', sans-serif;
+        font-family: 'Hind', sans-serif;
         height: 100%;
+	width: 100%;
+        margin: 0;
+        padding: 10px;
       }
 
       /* Style the header */
@@ -58,10 +61,10 @@
         margin-left: 100pz;
       } 
 
-      /*.mapDiv {
+      .mapDiv {
         margin-right: auto;
         margin-left: auto;
-      }*/
+      }
 
       /*  Horizontal nav bar with light gray background and a thin border
       Reference: https://www.w3schools.com/css/css_navbar.asp */
@@ -132,33 +135,35 @@
         }
       
       #map {
-	      height: 700px;
-	      width: 70%;
-	      display: block;
-	      margin-right: auto;
-	      margin-left: auto;
+	  height: 700px;
+	  width: 70%;
+	  display: block;
+	  margin-right: auto;
+	  margin-left: auto;
       }
 
       /* Optional: Makes the sample page fill the window. */
       html,
       body {
         height: 100%;
-	      width: 100%;
+	width: 100%;
         margin: 0;
         padding: 10px;
       }
     </style>
     <script>
+	    
       function initMap() {
         const map = new google.maps.Map(document.getElementById("map"), {
           center: { lat: 51.399206, lng: -121.476024 },
-		      zoom: 6,
+	  zoom: 6,
           mapTypeId: 'satellite',
-	        streetViewControl: false,
-          
+	  streetViewControl: false,         
         });
+	      
         // Create an array of alphabetical characters used to label the markers.
         const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	      
         // Add some markers to the map.
         // Note: The code uses the JavaScript Array.prototype.map() method to
         // create an array of markers based on a given "locations" array.
@@ -169,12 +174,14 @@
             label: labels[i % labels.length],
           });
         });
+	      
         // Add a marker clusterer to manage the markers.
         new MarkerClusterer(map, markers, {
           imagePath:
             "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
         });
       }
+	    
       const locations = [
         {lat: 	50.021685	, lng:	-114.9380363	},
       	{lat: 	50.1454638	, lng:	-117.6143793	},
