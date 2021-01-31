@@ -17,21 +17,21 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-		height: 700px;
-		width: 70%;
-		display: block;
-		margin-right: auto;
-		margin-left: auto;
+	height: 700px;
+	width: 70%;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
 	   }
 
       /* Optional: Makes the sample page fill the window. */
       html,
       body {
         height: 100%;
-		width: 100%;
+	width: 100%;
         margin: 0;
         padding: 10px;
-		font-family: 'Hind', sans-serif;
+	font-family: 'Hind', sans-serif;
       }
 	  
 	  * {
@@ -218,10 +218,10 @@
       // to the base of the flagpole.
       function initMap() {
         const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 5,
+          zoom: 6,
           center: { lat: 53.0660023, lng:-121.942005},
-		  mapTypeId: 'satellite',
-		  streetViewControl: false,
+	  mapTypeId: 'satellite',
+	 streetViewControl: false,
         });
         setMarkers(map);
       }
