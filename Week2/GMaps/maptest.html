@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>British Columbia Ski Hills</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap" 
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&display=swap" 
+    rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <style type="text/css">
+      /* Set the body font CSS for the entire webpage [Dana McKee]*/
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+            font-family: 'Hind', sans-serif;
+        height: 100%;
+      }
+
+      /* Style the header */
+      .titleblock {
+        background-color: rgb(42, 160, 160);
+        padding: 30px;
+        text-align: center;
+        color: white;
+        margin-top: 1%;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        font-size: 50px;
+      }
+
+      .subtitle {
+        font-size: 30px;
+      }
+
+      .skiheader {
+        text-decoration: underline;
+        text-decoration-color: rgb(42, 160, 160);
+        font-size: 30px;
+      }
+
+      .sharkwords {
+        font-size: 20px;
+      }
+
+      .section {
+        margin-right: 100pz;
+        margin-left: 100pz;
+      } 
+
+      /*.mapDiv {
+        margin-right: auto;
+        margin-left: auto;
+      }*/
+
+      /*  Horizontal nav bar with light gray background and a thin border
+      Reference: https://www.w3schools.com/css/css_navbar.asp */
+      .nav {
+        overflow: hidden;
+        background-color: LightGray;
+        border: 3px solid #686868;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      } 
+
+      /* Link text to the left, small padding around it */
+      li a {
+        float: left;
+        display: block;
+        color: Black;
+        text-align: center;
+        padding: 8px;
+        text-decoration: none;
+      }
+
+      /* nav bar link text styling, bold */
+      ul {
+        list-style-type: none;
+        font-family: Yusei Magic, Avantgarde, Veranda, Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+      }
+
+      /* This allows the colour to change to another colour as the user is hovering on ofn of the nav bar links */
+      li a:hover {
+        background-color: rgb(42, 160, 160);
+        color: black;
+      }
+
+      .footer {
+          position: relative;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          letter-spacing: 0.11em;
+          margin-top: 10px;
+          margin-bottom: 1%;
+          background-color: rgb(49, 153, 167);
+          padding: 4px 0 4px 0;
+      }
+
+      .footertext {
+        position: relative;
+        color: white;
+        text-align: center;
+        padding: 1px;
+      }
+
+      .footertext2 {
+        position: relative;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        padding: 1px;
+      }
+
+      @media (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      
+      #map {
+	      height: 700px;
+	      width: 70%;
+	      display: block;
+	      margin-right: auto;
+	      margin-left: auto;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+	      width: 100%;
+        margin: 0;
+        padding: 10px;
+      }
+    </style>
+    <script>
+      function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 51.399206, lng: -121.476024 },
+		      zoom: 6,
+          mapTypeId: 'satellite',
+	        streetViewControl: false,
+          
+        });
+        // Create an array of alphabetical characters used to label the markers.
+        const labels = "";
+        // Add some markers to the map.
+        // Note: The code uses the JavaScript Array.prototype.map() method to
+        // create an array of markers based on a given "locations" array.
+        // The map() method here has nothing to do with the Google Maps API.
+        const markers = locations.map((location, i) => {
+          return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length],
+          });
+        });
+        // Add a marker clusterer to manage the markers.
+        new MarkerClusterer(map, markers, {
+          imagePath:
+            "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+        });
+      }
+      const locations = [
+        {lat: 	50.021685	, lng:	-114.9380363	},
+      {lat: 	50.1454638	, lng:	-117.6143793	},
+      {lat: 	49.3801115	, lng:	-121.9354366	},
+      {lat: 	49.3904157	, lng:	-119.9047316	},
+      {lat: 	49.1863972	, lng:	-117.3015278	},
+      {lat: 	49.1023786	, lng:	-117.8193897	},
+      {lat: 	49.4628444	, lng:	-115.0872374	},
+      {lat: 	50.7230743	, lng:	-120.138992	},
+      {lat: 	49.1092526	, lng:	-118.5857632	},
+      {lat: 	54.5172275	, lng:	-124.2097586	},
+      {lat: 	49.36533	, lng:	-122.948213	},
+      {lat: 	50.3387641	, lng:	-115.8265548	},
+      {lat: 	49.7266728	, lng:	-118.9286326	},
+      {lat: 	49.1528266	, lng:	-119.235785	},
+      {lat: 	54.4844725	, lng:	-128.9533636	},
+      {lat: 	53.0660023	, lng:	-121.942005	},
+      {lat: 	49.8810732	, lng:	-119.7105691	},
+      {lat: 	53.9009836	, lng:	-121.8839734	},
+      {lat: 	50.2187059	, lng:	-126.3521018	},
+      {lat: 	50.1134381	, lng:	-122.9545477	},
+      {lat: 	50.4572978	, lng:	-116.2386686	},
+      {lat: 	49.0692465	, lng:	-120.9159271	},
+      {lat: 	51.2973743	, lng:	-117.0451754	},
+      {lat: 	49.3956905	, lng:	-123.2021823	},
+      {lat: 	53.9431982	, lng:	-122.453127	},
+      {lat: 	55.365527	, lng:	-122.609943	},
+      {lat: 	51.6368173	, lng:	-120.0258254	},
+      {lat: 	50.3590309	, lng:	-119.0569966	},
+      {lat: 	50.8775256	, lng:	-119.9118599	},
+      {lat: 	56.0097334	, lng:	-122.1704702	},
+      {lat: 	49.7415107	, lng:	-125.3039175	},
+      {lat: 	50.1149184	, lng:	-122.948621	},
+      {lat: 	51.9047839	, lng:	-121.2622874	},
+      {lat: 	54.7686192	, lng:	-127.2796617	},
+      {lat: 	49.4429452	, lng:	-117.1453923	},
+      {lat: 	49.6883619	, lng:	-116.0047743	},
+      {lat: 	50.9592023	, lng:	-118.1642368	},
+      {lat: 	49.3721144	, lng:	-123.0989765	},
+
+      ];
+    </script>
+  </head>
+  <body>
+    
+    <!-- Title Block -->
+<!-- Title name and slogan -->
+	<div class="titleblock">
+		<h1 class ="title">British Columbia Ski Hills</h1>
+		<p class="subtitle">Find the best powder in the world...</p>
+	</div>
+    
+	
+	<div class="nav">
+		<ul>
+			<li><a href="https://danammckee.github.io/FlemingGEOM99/home.html">Home</a></li>
+			<li><a href="https://danammckee.github.io/FlemingGEOM99/index.html">Table of Contents</a></li>
+			<li><a href="https://danammckee.github.io/FlemingGEOM99/Week1/index.html">Week 1</a></li>
+			<li><a href="https://danammckee.github.io/FlemingGEOM99/Week1and2/index.html">Week 2</a></li>
+		</ul>
+	</div>
+	
+	<!--
+	<div class="mapsection">
+		<div id="map"></div>
+	</div> -->
+	<!--<div>
+		<div id="map"></div>
+		<article>
+			<h2> words words</h2>
+		</article>
+	</div>-->
+	
+	 <div class="section2">
+		<div>
+			<h2 class="sharkheader">Snow, Snow, and more Snow...</h2>
+			<p class="sharkwords"> The mountains of British Columbia couples with 
+			a weather pattern that creates endless centomemtres of snow, British Coumbia
+			is a skier and snowboarder's paradice.  From a simple 30 minute drive out of 
+			downtown Vancouver that take you to the local northshore mountain resorts of 
+			Cypress, Seymour, and Grouse mountain, to the most eastern hill of endless powder
+			days at Fernie Alpine Resort, the choices are endless.</p>
+	 	</div>
+	 </div>
+	  
+	 <div id="map"></div>
+	  
+	  
+	<div class="footer">
+		<p class ="footertext">2021 Dana McKee GEOM 99  |  Data provided by <a href="https://www.google.com/earth/outreach/learn/visualize-your-data-on-a-custom-map-using-google-my-maps/" target="_blank">BC Data Catalogue</a>
+		<p class ="footertext2"> <a href="https://danammckee.github.io/FlemingGEOM99/Week1and2/index.html" target="_blank">Return to Week 1 and 2</a> </p>
+	</div>
+    
+    
+  </body>
+</html>
