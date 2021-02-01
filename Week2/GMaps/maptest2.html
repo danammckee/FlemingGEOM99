@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>British Columbia Ski Hills</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap" 
+		rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&display=swap" 
+		rel="stylesheet">
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+		<script
+		  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA&callback=initMap&libraries=&v=weekly"
+		  defer
+		></script>
+		<style type="text/css">	
+			
+			#map {
+				height: 700px;
+				width: 70%;
+				display: block;
+				margin-right: auto;
+				margin-left: auto;
+				border-style: double;
+				border-width: 20px;
+				border-color: rgb(42, 160, 160);
+			}
+			
+			html,
+			body {
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				padding-right: 10px;
+				padding-left:10px;
+				font-family: 'Hind', sans-serif;
+			  }
+		</style>
+		<script>
+			var map;
+			var InforObj = [];
+			var centerCords = {
+				lat: 50.021685,
+				lng: -114.9380363
+			};
+			var markersOnMap = [{
+					placeName: "Wapiti Ski Club",
+					LatLng: [{
+						lat: 50.021685,
+						lng: -114.9380363
+					}]
+				},
+				{
+					placeName: "Summit Lake Ski Area",
+					LatLng: [{
+						lat: 50.1454638,
+						lng: -117.6143793
+					}]
+				},
+				{
+					placeName: "Sasquatch Mountain Resort",
+					LatLng: [{
+						lat: 49.3801115,
+						lng: -121.9354366
+					}]
+				},
+				{
+					placeName: "Apex Mountain Resort",
+					LatLng: [{
+						lat: 49.3904157,
+						lng: -119.9047316
+					}]
+				},
+				{
+					placeName: "Salmo Ski Hill",
+					LatLng: [{
+						lat: 49.1863972,
+						lng: -117.3015278
+					}]
+				}
+			];
+
+			window.onload = function () {
+				initMap();
+			};
+
+			function addMarkerInfo() {
+				for (var i = 0; i < markersOnMap.length; i++) {
+					var contentString = '<div id="content"><h1>' + markersOnMap[i].placeName +
+						'</h1><p>Lorem ipsum dolor sit amet, vix mutat posse suscipit id, vel ea tantas omittam detraxit.</p></div>';
+
+					const marker = new google.maps.Marker({
+						position: markersOnMap[i].LatLng[0],
+						map: map
+					});
+
+					const infowindow = new google.maps.InfoWindow({
+						content: contentString,
+						maxWidth: 200
+					});
+
+					marker.addListener('click', function () {
+						closeOtherInfo();
+						infowindow.open(marker.get('map'), marker);
+						InforObj[0] = infowindow;
+					});
+					// marker.addListener('mouseover', function () {
+					//     closeOtherInfo();
+					//     infowindow.open(marker.get('map'), marker);
+					//     InforObj[0] = infowindow;
+					// });
+					// marker.addListener('mouseout', function () {
+					//     closeOtherInfo();
+					//     infowindow.close();
+					//     InforObj[0] = infowindow;
+					// });
+				}
+			}
+
+			function closeOtherInfo() {
+				if (InforObj.length > 0) {
+					/* detach the info-window from the marker ... undocumented in the API docs */
+					InforObj[0].set("marker", null);
+					/* and close it */
+					InforObj[0].close();
+					/* blank the array */
+					InforObj.length = 0;
+				}
+			}
+
+			function initMap() {
+				map = new google.maps.Map(document.getElementById('map'), {
+					zoom: 5.5,
+					center: { lat: 53.0660023, lng:-121.942005},
+					mapTypeId: 'satellite',
+					streetViewControl: false,
+				});
+				addMarkerInfo();
+			}
+		</script>
+	</head>
+
+	<body>
+		<h3>Snow, Snow, and more Snow...</h3>
+
+		<div id="map"></div>
+
+		
+
+	</body>
+
+</html>
