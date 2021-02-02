@@ -35,14 +35,114 @@
 				padding-left:10px;
 				font-family: 'Hind', sans-serif;
 			  }
+
+			* {
+				box-sizing: border-box;
+			}
+
+			.titleblock {
+			  background-color: rgb(42, 160, 160);
+			  text-align: center;
+			  color: white;
+			  padding: 30px;
+			  margin-bottom: 10px;
+			}
+			
+			.title {
+				font-size: 50px;
+			}
+
+			.subtitle {
+				font-size: 30px;
+			}
+			
+			.skititle {
+				font-size: 60px;
+			}
+
+			.skiheader {
+				text-decoration: underline;
+				text-decoration-color: rgb(42, 160, 160);
+				font-size: 30px;
+			}
+
+			.skiwords {
+				font-size: 20px;
+			}
+			
+			.section {
+				padding-right: 250px;
+				padding-left: 250px;
+			}
+			
+			.nav {
+			  overflow: hidden;
+			  background-color: LightGray;
+			  border: 3px solid #686868;
+			  margin-top: 10px;
+			  margin-bottom: 10px;
+			} 
+
+			li a {
+			  float: left;
+			  display: block;
+			  color: Black;
+			  text-align: center;
+			  padding: 8px;
+			  text-decoration: none;
+			}
+
+			ul {
+			  list-style-type: none;
+			  font-family: Yusei Magic, Avantgarde, Veranda, Arial, Helvetica, sans-serif;
+			  font-weight: bold;
+			  padding: 0;
+			  margin: 0;
+			}
+	
+			li a:hover {
+			  background-color: rgb(42, 160, 160);
+			  color: black;
+			}
+						
+			.footer {
+				bottom: 0;
+				left: 0;
+				right: 0;
+				letter-spacing: 0.11em;
+				margin-top: 10px;
+				margin-bottom: 1%;
+				background-color: rgb(49, 153, 167);
+				padding: 4px 0 4px 0;
+			}
+
+			.footertext {
+				position: relative;
+				color: white;
+				text-align: center;
+				padding: 1px;
+			}
+
+			.footertext2 {
+				position: relative;
+				font-size: 30px;
+				font-weight: bold;
+				color: white;
+				text-align: center;
+				padding: 1px;
+			}
+
+
+			@media (max-width: 600px) {
+			  .column {
+				width: 100%;
+			  }
+			  
 		</style>
 		<script>
 			var map;
 			var InforObj = [];
-			var centerCords = {
-				lat: 50.021685,
-				lng: -114.9380363
-			};
+			var centerCords = { lat: 52.9009836, lng: -121.8839734 };
 			var markersOnMap = [{
 					placeName: "Wapiti Ski Club",
 					LatLng: [{
@@ -77,76 +177,327 @@
 						lat: 49.1863972,
 						lng: -117.3015278
 					}]
-				}
+				},
+				{
+					placeName: "Red Mountain Resort",
+					LatLng: [{
+						lat: 49.1023786, 	
+						lng: -117.8193897
+					}]
+				},
+				{
+					placeName: "Fernie Alpine Resort",
+					LatLng: [{
+						lat: 49.4628444, 	
+						lng: -115.0872374
+					}]
+				},
+				{
+					placeName: "Harper Mountain",
+					LatLng: [{
+						lat: 50.7230743, 	 	
+						lng: -120.138992
+					}]
+				},	
+				{
+					placeName: "Phoenix Mountain Ski Resort",
+					LatLng: [{
+						lat: 49.1092526, 		
+						lng: -118.5857632
+					}]
+				},
+				{
+					placeName: "Murray Ridge Ski Area",
+					LatLng: [{
+						lat: 54.5172275	, 	
+						lng: -124.2097586
+					}]
+				},
+				{
+					placeName: "Mount Seymour",
+					LatLng: [{
+						lat: 49.36533, 	
+						lng: -122.948213
+					}]
+				},		
+				{
+					placeName: "Fairmont Hot Springs Ski Hill",
+					LatLng: [{
+						lat: 50.3387641, 	 	
+						lng: -115.8265548
+					}]
+				},
+				{
+					placeName: "Big White Ski Resort",
+					LatLng: [{
+						lat: 49.7266728, 	 	
+						lng: -118.9286326
+					}]
+				},
+				{
+					placeName: "Mount Baldy Ski Area",
+					LatLng: [{
+						lat: 49.1528266, 	 	
+						lng: -119.235785
+					}]
+				},
+				{
+					placeName: "Shames Mountain",
+					LatLng: [{
+						lat: 54.4844725, 	 	
+						lng: -128.9533636
+					}]
+				},					
+				{
+					placeName: "Troll Resort",
+					LatLng: [{
+						lat: 53.0660023, 	 	
+						lng: -121.942005
+					}]
+				},		
+				{
+					placeName: "Crystal Mountain Resort",
+					LatLng: [{
+						lat: 49.8810732, 	 	
+						lng: -119.7105691
+					}]
+				},
+				{
+					placeName: "Purden Ski Village",
+					LatLng: [{
+						lat: 53.9009836, 	 	
+						lng: -121.8839734
+					}]
+				},
+				{
+					placeName: "Mount Cain Alpine Park",
+					LatLng: [{
+						lat: 50.2187059, 	 	
+						lng: -126.3521018
+					}]
+				},
+				{
+					placeName: "Whistler Mountain Resort",
+					LatLng: [{
+						lat: 50.1134381, 	 	
+						lng: -122.9545477
+					}]
+				},
+				{
+					placeName: "Panorama Mountain Village",
+					LatLng: [{
+						lat: 50.4572978, 	 	
+						lng: -116.2386686
+					}]
+				},
+				{
+					placeName: "Manning Park",
+					LatLng: [{
+						lat: 49.0692465, 	 	
+						lng: -120.9159271
+					}]
+				},
+				{
+					placeName: "Kicking Horse Mountian Resort",
+					LatLng: [{
+						lat: 51.2973743, 	 	
+						lng: -117.0451754
+					}]
+				},	
+				{
+					placeName: "Cypress Mountain",
+					LatLng: [{
+						lat: 49.3956905, 	 	
+						lng: -123.2021823
+					}]
+				},	
+				{
+					placeName: "Tabor Mountain Ski Resort",
+					LatLng: [{
+						lat: 53.9431982, 	 	
+						lng: -122.453127
+					}]
+				},
+				{
+					placeName: "Powder King Mountain Resort",
+					LatLng: [{
+						lat: 55.365527, 	 	
+						lng: -122.609943
+					}]
+				},
+				{
+					placeName: "Clearwater Ski Hill",
+					LatLng: [{
+						lat: 51.6368173, 	 	
+						lng: -120.0258254
+					}]
+				},
+				{
+					placeName: "Silver Star Mountain Resort",
+					LatLng: [{
+						lat: 50.3590309, 	 	
+						lng: -119.0569966
+					}]
+				},
+				{
+					placeName: "Sun Peaks Resort",
+					LatLng: [{
+						lat: 50.8775256, 	 	
+						lng: -119.9118599
+					}]
+				},	
+				{
+					placeName: "Hudson's Hope - Portage Mopuntain",
+					LatLng: [{
+						lat: 56.0097334, 	 	
+						lng: -122.1704702
+					}]
+				},	
+				{
+					placeName: "Mount Washington",
+					LatLng: [{
+						lat: 49.7415107, 	 	
+						lng: -125.3039175
+					}]
+				},
+				{
+					placeName: "Mt Timothy Ski Hill",
+					LatLng: [{
+						lat: 51.9047839, 	 	
+						lng: -121.2622874
+					}]
+				},
+				{
+					placeName: "Hudson Bay Mountain",
+					LatLng: [{
+						lat: 54.7686192, 	 	
+						lng: -127.2796617
+					}]
+				},
+				{
+					placeName: "Whitewater Ski Resort",
+					LatLng: [{
+						lat: 49.4429452, 	 	
+						lng: -117.1453923
+					}]
+				},		
+				{
+					placeName: "Kimberley Ski & Summer Resort",
+					LatLng: [{
+						lat: 49.6883619, 	 	
+						lng: -116.0047743
+					}]
+				},
+				{
+					placeName: "Revelstoke Mountain Resort",
+					LatLng: [{
+						lat: 50.9592023, 	 	
+						lng: -118.1642368
+					}]
+				},
+				{
+					placeName: "Grouse Mountain",
+					LatLng: [{
+						lat: 49.3721144, 	 	
+						lng: -123.0989765
+					}]
+				},				
+				
 			];
+       window.onload = function () {
+            initMap();
+        };
 
-			window.onload = function () {
-				initMap();
-			};
 
-			function addMarkerInfo() {
-				for (var i = 0; i < markersOnMap.length; i++) {
-					var contentString = '<div id="content"><h1>' + markersOnMap[i].placeName +
-						'</h1><p>Lorem ipsum dolor sit amet, vix mutat posse suscipit id, vel ea tantas omittam detraxit.</p></div>';
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 5.5,
+                center: centerCords,
+				mapTypeId: "satellite",
+            });
+            addMarkerInfo();
+        }
 
-					const marker = new google.maps.Marker({
-						position: markersOnMap[i].LatLng[0],
-						map: map
-					});
+        function addMarkerInfo() {
+            for (var i = 0; i < markersOnMap.length; i++) {
+                var contentString = '<div id="content"><h1>' + markersOnMap[i].placeName;
 
-					const infowindow = new google.maps.InfoWindow({
-						content: contentString,
-						maxWidth: 200
-					});
+                const marker = new google.maps.Marker({
+                    position: markersOnMap[i].LatLng[0],
+                    map: map
+                });
 
-					marker.addListener('click', function () {
-						closeOtherInfo();
-						infowindow.open(marker.get('map'), marker);
-						InforObj[0] = infowindow;
-					});
-					// marker.addListener('mouseover', function () {
-					//     closeOtherInfo();
-					//     infowindow.open(marker.get('map'), marker);
-					//     InforObj[0] = infowindow;
-					// });
-					// marker.addListener('mouseout', function () {
-					//     closeOtherInfo();
-					//     infowindow.close();
-					//     InforObj[0] = infowindow;
-					// });
-				}
-			}
+                const infowindow = new google.maps.InfoWindow({
+                    content: contentString,
+                    maxWidth: 200
+                });
 
-			function closeOtherInfo() {
-				if (InforObj.length > 0) {
-					/* detach the info-window from the marker ... undocumented in the API docs */
-					InforObj[0].set("marker", null);
-					/* and close it */
-					InforObj[0].close();
-					/* blank the array */
-					InforObj.length = 0;
-				}
-			}
+                marker.addListener('click', function () {
+                    closeOtherInfo();
+                    infowindow.open(marker.get('map'), marker);
+                    InforObj[0] = infowindow;
+                });
+            }
+        }
 
-			function initMap() {
-				map = new google.maps.Map(document.getElementById('map'), {
-					zoom: 5.5,
-					center: { lat: 53.0660023, lng:-121.942005},
-					mapTypeId: 'satellite',
-					streetViewControl: false,
-				});
-				addMarkerInfo();
-			}
-		</script>
-	</head>
+        function closeOtherInfo() {
+            if (InforObj.length > 0) {
+                /* detach the info-window from the marker ... undocumented in the API docs */
+                InforObj[0].set("marker", null);
+                /* and close it */
+                InforObj[0].close();
+                /* blank the array */
+                InforObj.length = 0;
+            }
+        }
 
-	<body>
-		<h3>Snow, Snow, and more Snow...</h3>
 
-		<div id="map"></div>
+    </script>
+</head>
 
-		
+<body>
 
-	</body>
+	<div class="titleblock">
+		<h1 class ="skititle">British Columbia Ski Hills</h1>
+		<p class="subtitle">Find the best powder in the world...</p>
+	</div>
+	<div class="nav">
+		<ul>
+			<li><a href="https://danammckee.github.io/FlemingGEOM99/home.html">Home</a></li>
+			<li><a href="https://danammckee.github.io/FlemingGEOM99/Week1/index.html">Week 1</a></li>
+			<li><a href="https://danammckee.github.io/FlemingGEOM99/Week1and2/index.html">Week 2</a></li>
+		</ul>
+	</div>
+	<div class="section">
+		<div>
+			<h2 class="skiheader">Snow, Snow, and more Snow...</h2>
+			<p class="skiwords"> The mountains of British Columbia couples with 
+			a weather pattern that creates endless centomemtres of snow, British Coumbia
+			is a skier and snowboarder's paradice.  From a simple 30 minute drive out of 
+			downtown Vancouver that take you to the local northshore mountain resorts of 
+			Cypress, Seymour, and Grouse mountain, to the most eastern hill of endless powder
+			days at Fernie Alpine Resort, the choices are endless.</p>
+	 	</div>
+	 </div>
+    <!--The div element for the map -->
+    <div id="map"></div>
+	<div class="section">
+		<div>
+			<h2 class="skiheader">Planning Your Trip</h2>
+			<p class="skiwords"> When visiting British Columbia for an amazing ski/snowboard
+			vacation, the endless choices may be a bit much.  Start by accessing what type of 
+			adventure you want based on location.  Is ease of travel your priority?
+			Stick to resorts with major airports near them such as the local Vancouver mountains
+			and Whistler, or even head a bit fruther to Big White Ski Resort that has the Kelwona 
+			airport near by. With more planning, you can head deeper into the Province and seek out 
+			Resorts with the steepest steeps such as Kicking Horse Mountain by Golden, BC. Happy shredding! </p>
+	 	</div>
+	</div>
+    <div class="footer">
+		<p class ="footertext">2021 Dana McKee GEOM 99  |  Data provided by <a href="https://www.google.com/earth/outreach/learn/visualize-your-data-on-a-custom-map-using-google-my-maps/" target="_blank">BC Data Catalogue</a>
+		<p class ="footertext2"> <a href="https://danammckee.github.io/FlemingGEOM99/Week1and2/index.html" target="_blank">Return to Week 1 and 2</a> </p>
+	</div>
+
+</body>
 
 </html>
