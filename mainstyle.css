@@ -1,7 +1,7 @@
 /* Set the body font CSS for the entire webpage [Dana McKee]*/
-* {
+/** {
   box-sizing: border-box;
-}
+}*/
 
 body {
     	font-family: 'Hind', sans-serif;
@@ -14,7 +14,6 @@ body {
   padding: 30px;
   text-align: center;
   color: white;
-  margin-top: 1%;
   margin-bottom: 10px;
 }
 
@@ -68,7 +67,7 @@ li a {
   display: block;
   color: Black;
   text-align: center;
-  font-size: 25px;
+  font-size: 35px;
   padding: 8px;
   text-decoration: none;
 }
@@ -78,7 +77,7 @@ ul {
   list-style-type: none;
   font-family: Yusei Magic, Avantgarde, Veranda, Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 35px;
   padding: 0;
   margin: 0;
 }
@@ -139,7 +138,7 @@ li a:hover {
 
 /* Set up Footer block CSS to be set to the bottom of the page and not underlay vertival side nav bar [Dana McKee]*/
 .footer {
-    position: relative;
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
