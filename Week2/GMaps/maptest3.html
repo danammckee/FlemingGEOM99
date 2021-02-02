@@ -60,7 +60,12 @@
 				text-decoration-color: rgb(42, 160, 160);
 				font-size: 30px;
 			}
-
+			
+			.firstHeading {
+				color: rgb(42, 160, 160);
+				font-size: 20px;
+			}
+			
 			.skiwords {
 				font-size: 20px;
 			}
@@ -139,7 +144,7 @@
 	var icons = { snowflake: { icon: "http://maps.google.com/mapfiles/kml/shapes/snowflake_simple.png" } };
 
 	//TITLE | POSITION - LAT , LNG | ICON | TITLE | CONTENT
-	var airports = [
+	var resorts = [
 		{ 
 			title: "Wapiti Ski Club", 
 			position: { lat: 50.021685, lng: -114.9380363 }, 
@@ -189,30 +194,27 @@
 
 	function initMap() {
 		
-		var centerCords = { lat: 52.9009836, lng: -121.8839734 
-		};
 		
 		var map = new google.maps.Map( document.getElementById('map'), {
 		  zoom: 6,
-		  center: centerCords, 
-		  disableDefaultUI: true,
+		  center: { lat: 52.9009836, lng: -121.8839734 }, 
 		  mapTypeId: "satellite",
 		  streetViewControl: false,
 		});
 			  
 		var InfoWindows = new google.maps.InfoWindow({});
 		
-		airports.forEach(function(airport) {	
+		resorts.forEach(function(resort) {	
 			var marker = new google.maps.Marker({
-			  position: { lat: airport.position.lat, lng: airport.position.lng },
+			  position: { lat: resort.position.lat, lng: resort.position.lng },
 			  map: map,
-			  icon: icons[airport.icon].icon,
-			  title: airport.title
+			  icon: icons[resort.icon].icon,
+			  title: resort.title
 			});
 			
-			marker.addListener('mouseover', function() {
+			marker.addListener('click', function() {
 			  InfoWindows.open(map, this);
-			  InfoWindows.setContent(airport.content);
+			  InfoWindows.setContent(resort.content);
 			});
 		});
 	}
