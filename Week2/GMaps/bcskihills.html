@@ -1,319 +1,235 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>British Columbia Ski Hills</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap" 
-    rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&display=swap" 
-    rel="stylesheet">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA&callback=initMap&libraries=&v=weekly"
-      defer
-    ></script>
-    <style type="text/css">
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-	height: 700px;
-	width: 70%;
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
-	   }
+	<head>
+	<title>British Columbia Ski Hills</title>
+	
+	
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap" 
+		rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&display=swap" 
+		rel="stylesheet">
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+		<script
+		  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLd0Hl7PVa0PnyZVIlLrAUipqZ6npRSYA&callback=initMap&libraries=&v=weekly"
+		  defer
+		></script>
+		<style type="text/css">	
+			#map {
+				height: 700px;
+				width: 70%;
+				display: block;
+				margin-right: auto;
+				margin-left: auto;
+				border-style: double;
+				border-width: 20px;
+				border-color: rgb(42, 160, 160);
+			}
+			
+			html,
+			body {
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				font-family: 'Hind', sans-serif;
+			  }
 
-      /* Optional: Makes the sample page fill the window. */
-      html,
-      body {
-        height: 100%;
-	width: 100%;
-        margin: 0;
-        padding: 10px;
-	font-family: 'Hind', sans-serif;
-      }
-	  
-	  * {
-	  box-sizing: border-box;
-	}
+			.titleblock {
+			  background-color: rgb(42, 160, 160);
+			  text-align: center;
+			  color: white;
+			  padding: 30px;
+			  margin-bottom: 10px;
+			}
+			
+			.title {
+				font-size: 50px;
+			}
 
-	/* Style the header */
-	.titleblock {
-	  background-color: rgb(42, 160, 160);
-	  padding: 30px;
-	  text-align: center;
-	  color: white;
-	  margin-top: 1%;
-	  margin-bottom: 10px;
-	}
+			.subtitle {
+				font-size: 30px;
+			}
+			
+			.skititle {
+				font-size: 60px;
+			}
 
-	.title {
-		font-size: 50px;
-	}
+			.skiheader {
+				text-decoration: underline;
+				text-decoration-color: rgb(42, 160, 160);
+				font-size: 30px;
+			}
+			
+			.firstHeading {
+				color: rgb(42, 160, 160);
+				font-size: 20px;
+			}
+			
+			.skiwords {
+				font-size: 20px;
+			}
+			
+			.section {
+				padding-right: 250px;
+				padding-left: 250px;
+			}
+			
+			.nav {
+			  overflow: hidden;
+			  background-color: LightGray;
+			  border: 3px solid #686868;
+			  margin-top: 10px;
+			  margin-bottom: 10px;
+			  text-size: 30px;
+			  padding: 10px;
+			} 
 
+			li a {
+			  float: left;
+			  display: block;
+			  color: Black;
+			  text-align: center;
+			  padding: 8px;
+			  text-decoration: none;
+			}
 
-	.subtitle {
-		font-size: 30px;
-	}
+			ul {
+			  list-style-type: none;
+			  font-family: Yusei Magic, Avantgarde, Veranda, Arial, Helvetica, sans-serif;
+			  font-weight: bold;
+			  padding: 0;
+			  margin: 0;
+			}
+	
+			li a:hover {
+			  background-color: rgb(42, 160, 160);
+			  color: black;
+			}
+						
+			.footer {
+				bottom: 0;
+				left: 0;
+				right: 0;
+				letter-spacing: 0.11em;
+				margin-top: 10px;
+				margin-bottom: 1%;
+				background-color: rgb(49, 153, 167);
+				padding: 4px 0 4px 0;
+			}
 
+			.footertext {
+				position: relative;
+				color: white;
+				text-align: center;
+				padding: 1px;
+			}
 
-	.skititle {
-		font-size: 60px;
-	}
-
-	.skiheader {
-		text-decoration: underline;
-		text-decoration-color: rgb(42, 160, 160);
-		font-size: 30px;
-	}
-
-	.skiwords {
-		font-size: 20px;
-	}
-
-	.section {
-		margin-right: 100pz;
-		margin-left: 100pz;
-	} 
-
-	.section2 {
-		padding-right: 250px;
-		padding-left: 250px;
-	}
-
-	.mapDiv {
-		margin-right: auto;
-		margin-left: auto;
-		margin-bottom: 20px;
-	}
-
-	/*  Horizontal nav bar with light gray background and a thin border
-	Reference: https://www.w3schools.com/css/css_navbar.asp */
-	.nav {
-	  overflow: hidden;
-	  background-color: LightGray;
-	  border: 3px solid #686868;
-	  margin-top: 10px;
-	  margin-bottom: 10px;
-	} 
-
-	/* Link text to the left, small padding around it */
-	li a {
-	  float: left;
-	  display: block;
-	  color: Black;
-	  text-align: center;
-	  padding: 8px;
-	  text-decoration: none;
-	}
-
-	/* nav bar link text styling, bold */
-	ul {
-	  list-style-type: none;
-	  font-family: Yusei Magic, Avantgarde, Veranda, Arial, Helvetica, sans-serif;
-	  font-weight: bold;
-	  padding: 0;
-	  margin: 0;
-	}
-
-	/* This allows the colour to change to another colour as the user is hovering on ofn of the nav bar links */
-	li a:hover {
-	  background-color: rgb(42, 160, 160);
-	  color: black;
-	}
-
-	/* ul.b {
-	  list-style-type: square;
-	} */
-
-	.container {
-	  position: relative;
-	  width: 50%;
-	  margin-left: 50%;
-	  margin-bottom: 20px;
-	}
-
-	.image {
-		display: block;
-		max-width: 100%;
-		  margin-left: auto;
-		margin-right: auto;
-		height: auto;
-	}
-
-	.overlay {
-	  position: absolute;
-	  top: 0;
-	  bottom: 0;
-	  left: 0;
-	  right: 0;
-	  height: 100%;
-	  width: 100%;
-	  opacity: 0;
-	  transition: .5s ease;
-	  background-color: rgb(49, 153, 167);
-	}
-
-	.container:hover .overlay {
-	  opacity: 1;
-	}
-
-	.text {
-	  color: white;
-	  font-size: 60px;
-	  position: absolute;
-	  top: 50%;
-	  left: 50%;
-	  -webkit-transform: translate(-50%, -50%);
-	  -ms-transform: translate(-50%, -50%);
-	  transform: translate(-50%, -50%);
-	  text-align: center;
-	}
-
-	/* Set up Footer block CSS to be set to the bottom of the page and not underlay vertival side nav bar [Dana McKee]*/
-	.footer {
-		position: relative;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		letter-spacing: 0.11em;
-		margin-top: 10px;
-		margin-bottom: 1%;
-		background-color: rgb(49, 153, 167);
-		padding: 4px 0 4px 0;
-	}
-
-	/* START: FOOTER CSS [Dana McKee] */
-	/* Set up Footer text CSS [Dana McKee]*/
-	.footertext {
-		position: relative;
-		color: white;
-		text-align: center;
-		padding: 1px;
-	}
-
-	.footertext2 {
-		position: relative;
-		font-size: 30px;
-		font-weight: bold;
-		color: white;
-		text-align: center;
-		padding: 1px;
-	}
+			.footertext2 {
+				position: relative;
+				font-size: 30px;
+				font-weight: bold;
+				color: white;
+				text-align: center;
+				padding: 1px;
+			}
 
 
-	@media (max-width: 600px) {
-	  .column {
-		width: 100%;
-	  }
-    </style>
+			@media (max-width: 600px) {
+			  .column {
+				width: 100%;
+			  }
+	</style>
     <script>
-		// References: https://developers.google.com/maps/documentation/javascript/examples/icon-complex//
-		//http://kml4earth.appspot.com/icons.html//
-	
-	
-      // The following example creates complex markers to indicate ski Resorts near
-      // British Columbia, Canada. Note that the anchor is set to (0,32) to correspond
-      // to the base of the flagpole.
-      function initMap() {
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 6,
-          center: { lat: 53.0660023, lng:-121.942005},
-	  mapTypeId: 'satellite',
-	 streetViewControl: false,
-        });
-        setMarkers(map);
-      }
-		  // Data for the markers consisting of a name, a LatLng and a zIndex for the
-		  // order in which these markers should display on top of each other.
-		  const resorts = [
-			["	Wapiti Ski Club	", 	50.021685	, 	-114.9380363	, 	38	],
-			["	Summit Lake Ski Area	", 	50.1454638	, 	-117.6143793	, 	37	],
-			["	Sasquatch Mountain Resort	", 	49.3801115	, 	-121.9354366	, 	36	],
-			["	Apex Mountain Resort	", 	49.3904157	, 	-119.9047316	, 	35	],
-			["	Salmo Ski Hill	", 	49.1863972	, 	-117.3015278	, 	34	],
-			["	Red Mountain Resort	", 	49.1023786	, 	-117.8193897	, 	33	],
-			["	Fernie Alpine Resort	", 	49.4628444	, 	-115.0872374	, 	32	],
-			["	Harper Mountain	", 	50.7230743	, 	-120.138992	, 	31	],
-			["	Phoenix Mountain Ski Resort	", 	49.1092526	, 	-118.5857632	, 	30	],
-			["	Murray Ridge Ski Area	", 	54.5172275	, 	-124.2097586	, 	29	],
-			["	Mount Seymour	", 	49.36533	, 	-122.948213	, 	28	],
-			["	Fairmont Hot Springs Ski Hill	", 	50.3387641	, 	-115.8265548	, 	27	],
-			["	Big White Ski Resort	", 	49.7266728	, 	-118.9286326	, 	26	],
-			["	Mount Baldy Ski Area	", 	49.1528266	, 	-119.235785	, 	25	],
-			["	Shames Mountain	", 	54.4844725	, 	-128.9533636	, 	24	],
-			["	Troll Resort	", 	53.0660023	, 	-121.942005	, 	23	],
-			["	Crystal Mountain Resort	", 	49.8810732	, 	-119.7105691	, 	22	],
-			["	Purden Ski Village	", 	53.9009836	, 	-121.8839734	, 	21	],
-			["	Mount Cain Alpine Park	", 	50.2187059	, 	-126.3521018	, 	20	],
-			["	Whistler Mountain Resort	", 	50.1134381	, 	-122.9545477	, 	19	],
-			["	Panorama Mountain Village	", 	50.4572978	, 	-116.2386686	, 	18	],
-			["	Manning Park	", 	49.0692465	, 	-120.9159271	, 	17	],
-			["	Kicking Horse Mountian Resort	", 	51.2973743	, 	-117.0451754	, 	16	],
-			["	Cypress Bowl	", 	49.3956905	, 	-123.2021823	, 	15	],
-			["	Tabor Mountain Ski Resort	", 	53.9431982	, 	-122.453127	, 	14	],
-			["	Powder King Mountain Resort	", 	55.365527	, 	-122.609943	, 	13	],
-			["	Clearwater Ski Hill	", 	51.6368173	, 	-120.0258254	, 	12	],
-			["	Silver Star Mountain Resort	", 	50.3590309	, 	-119.0569966	, 	11	],
-			["	Sun Peaks Resort	", 	50.8775256	, 	-119.9118599	, 	10	],
-			["	Hudson's Hope - Portage Mopuntain	", 	56.0097334	, 	-122.1704702	, 	9	],
-			["	Mt Washington	", 	49.7415107	, 	-125.3039175	, 	8	],
-			["	Blackcomb	", 	50.1149184	, 	-122.948621	, 	7	],
-			["	Mt Timothy Ski Hill	", 	51.9047839	, 	-121.2622874	, 	6	],
-			["	Hudson Bay Mountain	", 	54.7686192	, 	-127.2796617	, 	5	],
-			["	Whitewater Ski Resort	", 	49.4429452	, 	-117.1453923	, 	4	],
-			["	Kimberley Ski & Summer Resort	", 	49.6883619	, 	-116.0047743	, 	3	],
-			["	Revelstoke Mountain Resort	", 	50.9592023	, 	-118.1642368	, 	2	],
-			["	Grouse Mountain	", 	49.3721144	, 	-123.0989765	, 	1	],		
-		  ];
-		
-      function setMarkers(map) {
-        // Adds markers to the map.
-        // Marker sizes are expressed as a Size of X,Y where the origin of the image
-        // (0,0) is located in the top left of the image.
-        // Origins, anchor positions and coordinates of the marker increase in the X
-        // direction to the right and in the Y direction down.
-        const image = {
-          url:
-            "http://maps.google.com/mapfiles/kml/shapes/snowflake_simple.png",
-          // This marker is 20 pixels wide by 32 pixels high.
-          size: new google.maps.Size(60, 60),
-          // The origin for this image is (0, 0).
-          origin: new google.maps.Point(0, 0),
-          // The anchor for this image is the base of the flagpole at (0, 32).
-          anchor: new google.maps.Point(0, 0),
-        };
-        // Shapes define the clickable region of the icon. The type defines an HTML
-        // <area> element 'poly' which traces out a polygon as a series of X,Y points.
-        // The final coordinate closes the poly by connecting to the first coordinate.
-        const shape = {
-          coords: [1, 1, 1, 20, 18, 20, 18, 1],
-          type: "poly",
-        };
+	var icons = { snowflake: { icon: "http://maps.google.com/mapfiles/kml/shapes/snowflake_simple.png" } };
 
-        for (let i = 0; i < resorts.length; i++) {
-          const resort = resorts[i];
-          new google.maps.Marker({
-            position: { lat: resort[1], lng: resort[2] },
-            map,
-            icon: image,
-            shape: shape,
-            title: resort[0],
-            zIndex: resort[3],
-          });
-        }
-      }
-    </script>
-  </head>
-  <body>
-    
+	//TITLE | POSITION - LAT , LNG | ICON | TITLE | CONTENT
+	var resorts = [
+		{ 
+			title: "Wapiti Ski Club", 
+			position: { lat: 50.021685, lng: -114.9380363 }, 
+			icon: 'snowflake',	
+			content: '<div id="content"><h1 id="firstHeading" class="firstHeading">Wapiti Ski Club</h1><div id="bodyContent"><p><b>Wapiti Ski Club: </b> A hill that the entire family will enjoy</p> <p>Visit the <a href="https://wapitiskiclub.com/">resort site</a> for more information about your next trip!</p></div></div>'
+		},
+		{ 
+			title: "Summit Lake Ski Area", 
+			position: { 
+				lat: 50.1454638, 
+				lng: -117.6143793 }, 
+			icon: 'snowflake',	
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Summit Lake Ski Area</h1><div id="bodyContent"><p><b>Summit Lake Ski Area: </b> Experience the Kootenays at this community oriented hill</p> <p>Visit the <a href="https://skisummitlake.com/">resort site</a> for more information about your next trip!</p></div></div>'
+		},
+		{
+			title: "Sasquatch Mountain Resort",
+			position: {
+				lat: 49.3801115,
+				lng: -121.9354366, },
+			icon: "snowflake",
+			content: 
+				'<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Sasquatch Mountain Resort</h1><div id="bodyContent"><p><b>Sasquatch Mountain Resort: </b>Find powder days close to Vancouver</p> <p>Visit the <a href="https://sasquatchmountain.ca/">resort site</a> for more information</p></div></div>'
+			},
+				{
+			title: "Apex Mountain Resort",
+			position: {
+				lat: 49.3904157,
+				lng: -119.9047316, },
+			icon: "snowflake",
+			content: 
+				'<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Apex Mountain Resort</h1><div id="bodyContent"><p><b>Apex Mountain Resort: </b>Home to the coolest James around</p> <p>Visit the <a href="https://www.apexresort.com/">resort site</a> for more information</p></div></div>'
+			},
+				{
+			title: "Salmo Ski Hill",
+			position: {
+				lat: 49.1863972,
+				lng: -117.3015278, },
+			icon: "snowflake",
+			content: 
+				'<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Salmo Ski Hill</h1><div id="bodyContent"><p><b>Salmo Ski Hill: </b>Volunteer run and famous for its night skiing</p> <p>Visit the <a href="http://skisalmo.com/?fbclid=IwAR2z07rYrRc6hMTCj9x1HtiCZNTDx4lOJguQQDxnrB1AXksim4BBmY53kgI">resort site</a> for more information</p></div></div>'
+			},
+		{ 
+			title: 'Red Mountain Resort', 
+			position: { 
+				lat: 49.1023786, 
+				lng: -117.8193897 }, 
+			icon: 'snowflake',	
+			content: '<div id="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Red Mountain Resort</h1><div id="bodyContent"><p><b>Red Mountain Resort: </b> The first stop on BCs powder highway</p> <p>Visit the <a href="https://www.redresort.com/">resort site</a> for more information</p></div></div>'}
+	];
+
+	function initMap() {
+		
+		
+		var map = new google.maps.Map( document.getElementById('map'), {
+		  zoom: 6,
+		  center: { lat: 52.9009836, lng: -121.8839734 }, 
+		  mapTypeId: "satellite",
+		  streetViewControl: false,
+		});
+			  
+		var InfoWindows = new google.maps.InfoWindow({});
+		
+		resorts.forEach(function(resort) {	
+			var marker = new google.maps.Marker({
+			  position: { lat: resort.position.lat, lng: resort.position.lng },
+			  map: map,
+			  icon: icons[resort.icon].icon,
+			  title: resort.title
+			});
+			
+			marker.addListener('click', function() {
+			  InfoWindows.open(map, this);
+			  InfoWindows.setContent(resort.content);
+			});
+		});
+	}
+	</script>
+	</head>
+
+	<body>
+
 	<div class="titleblock">
 		<h1 class ="skititle">British Columbia Ski Hills</h1>
 		<p class="subtitle">Find the best powder in the world...</p>
 	</div>
-    
-	
 	<div class="nav">
 		<ul>
 			<li><a href="https://danammckee.github.io/FlemingGEOM99/home.html">Home</a></li>
@@ -321,9 +237,7 @@
 			<li><a href="https://danammckee.github.io/FlemingGEOM99/Week1and2/index.html">Week 2</a></li>
 		</ul>
 	</div>
-	
-	
-	 <div class="section2">
+	<div class="section">
 		<div>
 			<h2 class="skiheader">Snow, Snow, and more Snow...</h2>
 			<p class="skiwords"> The mountains of British Columbia couples with 
@@ -334,10 +248,9 @@
 			days at Fernie Alpine Resort, the choices are endless.</p>
 	 	</div>
 	 </div>
-	  
-	 <div id="map"></div>
-	 
-	 <div class="section2">
+    <!--The div element for the map -->
+    <div id="map"></div>
+	<div class="section">
 		<div>
 			<h2 class="skiheader">Planning Your Trip</h2>
 			<p class="skiwords"> When visiting British Columbia for an amazing ski/snowboard
@@ -348,13 +261,12 @@
 			airport near by. With more planning, you can head deeper into the Province and seek out 
 			Resorts with the steepest steeps such as Kicking Horse Mountain by Golden, BC. Happy shredding! </p>
 	 	</div>
-	 </div>
-	  
-	<div class="footer">
+	</div>
+    <div class="footer">
 		<p class ="footertext">2021 Dana McKee GEOM 99  |  Data provided by <a href="https://www.google.com/earth/outreach/learn/visualize-your-data-on-a-custom-map-using-google-my-maps/" target="_blank">BC Data Catalogue</a>
 		<p class ="footertext2"> <a href="https://danammckee.github.io/FlemingGEOM99/Week2/index.html" target="_blank">Return to Week 2</a> </p>
 	</div>
-    
-    
-  </body>
+
+</body>
+
 </html>
