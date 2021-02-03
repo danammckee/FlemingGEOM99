@@ -22,7 +22,7 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
 * Create the Overview (hello world) example. 
 * Location set to Drumheller, AB
 * Check out the location [HERE](https://danammckee.github.io/FlemingGEOM99/Week1/googlemapsjson/hellodrumheller.html)
-  * https://danammckee.github.io/FlemingGEOM99/Week1and2/googlemapsjson/hellodrumheller.htmll 
+  * https://danammckee.github.io/FlemingGEOM99/Week1/googlemapsjson/hellodrumheller.htmll 
 
 ### **Directions API (JSON Return)**
 
@@ -47,13 +47,13 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
 
 * Add a simple Google map with a marker to a webpage
 * [Royal Tyrrell Museum](https://danammckee.github.io/FlemingGEOM99/Week2/GMaps/tutorial1.html)
-  * https://danammckee.github.io/FlemingGEOM99/Week1and2/GMaps/tutorial1.html
+  * https://danammckee.github.io/FlemingGEOM99/Week2/GMaps/tutorial1.html
 
 ### **Tutorial 2 - Marker Clustering**
 
 * Use marker clusters to diaplay a large number of markers on a map
 * [Ontario Provincial Parks](https://danammckee.github.io/FlemingGEOM99/Week2/GMaps/tutorial12.html)
-  * https://danammckee.github.io/FlemingGEOM99/Week1and2/GMaps/tutorial2.html
+  * https://danammckee.github.io/FlemingGEOM99/Week2/GMaps/tutorial2.html
 
 ### **Tutorial 3 - Earthquakes: Basic Markers, Sized Circles, Heatmap**
 
@@ -68,5 +68,5 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
 
 ## **Task 1 - Create a Single HTML5 Page Using Google Map Technology**
 
-* [Ski Hills of Brtish Columbia](https://danammckee.github.io/bcskihills/index.html)
+* [Ski Hills of Brtish Columbia](https://danammckee.github.io/FlemingGEOM99/Week2/GMaps/bcskihills.html)
   * https://danammckee.github.io/FlemingGEOM99/Week2/GMaps/bcskihills.html
