@@ -151,16 +151,16 @@ li a:hover {
 	position: relative;
 	color: white;
 	text-align: center;
-	padding: 1px;
+	padding: 0;
 }
 
 .footertext2 {
 	position: relative;
-	font-size: 30px;
+	font-size: 15px;
 	font-weight: bold;
 	color: white;
 	text-align: center;
-	padding: 1px;
+	padding: 0;
 }
 
 
