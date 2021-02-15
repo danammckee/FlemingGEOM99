@@ -125,16 +125,16 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
 ### **Tutorial 1 - Display a Map**
  * [Display a Map](https://danammckee.github.io/FlemingGEOM99/Week4/ArcGIS/APIandJavaScript/DisplayMap2.html)
  
- ### **Tutorial 2 - Display your Location**
+### **Tutorial 2 - Display your Location**
  * [Display your Location](https://danammckee.github.io/FlemingGEOM99/Week4/ArcGIS/APIandJavaScript/DisplayLocation.html)
  
-  ### **Tutorial 3 - Add a Feature**
+### **Tutorial 3 - Add a Feature**
  * [Add a Feature](https://danammckee.github.io/FlemingGEOM99/Week4/ArcGIS/APIandJavaScript/AddFeature.html)
  
-  ### **Tutorial 4 - Exaggerated Earth**
+### **Tutorial 4 - Exaggerated Earth**
  * [Exaggerated Earth](https://danammckee.github.io/FlemingGEOM99/Week4/ArcGIS/APIandJavaScript/ExaggeratedEarth.html)
  
-  ### **Tutorial 5 - Valentine's Day**
+### **Tutorial 5 - Valentine's Day**
   * [Valentine's Day](https://danammckee.github.io/FlemingGEOM99/Week4/ArcGIS/APIandJavaScript/valentinesday.html)
   * [VDay](https://danammckee.github.io/FlemingGEOM99/Week4/ArcGIS/APIandJavaScript/vday.html)
 
