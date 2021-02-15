@@ -1,131 +1,111 @@
+<!--https://developers.arcgis.com/javascript/latest/sample-code/layers-csv/-->
+<!--https://developers.arcgis.com/javascript/latest/sample-code/layers-custom-elevation-exaggerated/-->
+<!--https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-Symbol3D.html-->
+<!--https://developers.arcgis.com/javascript/latest/sample-code/visualization-point-styles/-->
+<!--https://www.esri.com/arcgis-blog/products/js-api-arcgis/mapping/take-advantage-of-the-javascript-symbol-playground/?rmedium=redirect&rsource=blogs.esri.com/esri/arcgis/2017/03/28/take-advantage-of-the-javascript-symbol-playground-->
+<!--https://developers.arcgis.com/documentation/mapping-apis-and-location-services/maps/graphics/-->
+
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>ArcGIS API for JavaScript Tutorials: Add a point, line, and polygon</title>
-  <style>
-    html, body, #viewDiv {
-      padding: 0;
-      margin: 0;
-      height: 100%;
-      width: 100%;
-    }
-  </style>
-  <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
-  <script src="https://js.arcgis.com/4.18/"></script>
-  <script>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Intro to CSVLayer | Sample | ArcGIS API for JavaScript 4.18</title>
 
-  require([
-    "esri/config",
-    "esri/Map",
-    "esri/views/MapView",
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        background-color: aliceblue;
+      }
+      #viewDiv canvas{
+        filter: drop-shadow(16px 16px 10px rgba(0,0,0, 0.5));
+      }
 
-    "esri/Graphic",
-    "esri/layers/GraphicsLayer"
+      .esri-legend {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    </style>
 
-    ], function(esriConfig,Map, MapView, Graphic, GraphicsLayer) {
+    <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.18/"></script>
 
-  esriConfig.apiKey = "AAPK54f20e954f7343399bd7c0e42a023312VNgDv6gWf1mdrUfvhQ0OGz6WhjpAgXaebJhOk-ixi4GgDFP3xfXr0U-xb9av0MR3";
+    <script>
+      require(["esri/WebScene", "esri/layers/CSVLayer", "esri/views/SceneView"], function(
+        WebScene,
+        CSVLayer,
+        SceneView
+      ) {
+        // If CSV files are not on the same domain as your website, a CORS enabled server
+        // or a proxy is required.
+        const url = "https://danammckee.github.io/FlemingGEOM99/Week4/ArcGIS/APIandJavaScript/lovecities.csv"
+        // Paste the url into a browser's address bar to download and view the attributes
+        // in the CSV file. These attributes include:
+        // * city - City
+		// * place - Place
+		// * country - Country
 
-  const map = new Map({
-    basemap: "arcgis-topographic" //Basemap layer service
-  });
+        const template = {
+          title: "Cities of Love",
+          content: "{city} - {place}, {country}."
+        };
 
-  const view = new MapView({
-    map: map,
-    center: [-104.1666,53.4866], //Longitude, latitude
-    zoom: 13,
-    container: "viewDiv"
- });
+        const csvLayer = new CSVLayer({
+          url: url,
+          copyright: "Dana McKee",
+          popupTemplate: template
+        });
 
- const graphicsLayer = new GraphicsLayer();
- map.add(graphicsLayer);
+        csvLayer.renderer = {
+          type: "simple", // autocasts as new SimpleRenderer()
+          symbol: {
+            type: "point-3d", // autocasts as new PointSymbol3D()
+            // for this symbol we use 2 symbol layers, one for the outer circle
+            // and one for the inner circle
+            symbolLayers: [{
+              type: "icon", // autocasts as new IconSymbol3DLayer()
+              resource: { primitive: "circle"},
+              material: { color: [255, 84, 54, 1] },
+              size: 20
+            }]
+          }
+        };
 
- const point = { //Create a point
-    type: "point",
-    longitude: -104.1666,
-    latitude: 53.4866
- };
- const simpleMarkerSymbol = {
-    type: "simple-marker",
-    color: [226, 119, 40],  // Orange
-    outline: {
-        color: [255, 255, 255], // White
-        width: 1
-    }
- };
+        const map = new WebScene({
+          portalItem: {
+            id: "a467ef1140de4e88acf34d38df9fb869"
+          }
+        });
 
- const pointGraphic = new Graphic({
-    geometry: point,
-    symbol: simpleMarkerSymbol
- });
- graphicsLayer.add(pointGraphic);
+        map.add(csvLayer);
 
-    // Create a line geometry
- const polyline = {
-    type: "polyline",
-    paths: [
-        [-118.821527826096, 34.0139576938577], //Longitude, latitude
-        [-118.814893761649, 34.0080602407843], //Longitude, latitude
-        [-118.808878330345, 34.0016642996246]  //Longitude, latitude
-    ]
- };
- const simpleLineSymbol = {
-    type: "simple-line",
-    color: [226, 119, 40], // Orange
-    width: 2
- };
+        const view = new SceneView({
+          container: "viewDiv",
+          qualityProfile: "high",
+          map: map,
+          alphaCompositingEnabled: true,
+          highlightOptions: {
+            fillOpacity: 0,
+            color: "#ffffff"
+          },
+          constraints: {
+            altitude: {
+              min: 700000
+            }
+          }
+        });
+        view.environment.background = {
+          type: "color",
+          color: [0, 0, 0, 0]
+        };
+      });
+    </script>
+  </head>
 
- const polylineGraphic = new Graphic({
-    geometry: polyline,
-    symbol: simpleLineSymbol
- });
- graphicsLayer.add(polylineGraphic);
-
- // Create a polygon geometry
- const polygon = {
-    type: "polygon",
-    rings: [
-        [-118.818984489994, 34.0137559967283], //Longitude, latitude
-        [-118.806796597377, 34.0215816298725], //Longitude, latitude
-        [-118.791432890735, 34.0163883241613], //Longitude, latitude
-        [-118.79596686535, 34.008564864635],   //Longitude, latitude
-        [-118.808558110679, 34.0035027131376]  //Longitude, latitude
-    ]
- };
-
- const simpleFillSymbol = {
-    type: "simple-fill",
-    color: [227, 139, 79, 0.8],  // Orange, opacity 80%
-    outline: {
-        color: [255, 255, 255],
-        width: 1
-    }
- };
-
- const popupTemplate = {
-    title: "{Name}",
-    content: "{Description}"
- }
- const attributes = {
-    Name: "Graphic",
-    Description: "I am a polygon"
- }
-
- const polygonGraphic = new Graphic({
-    geometry: polygon,
-    symbol: simpleFillSymbol,
-
-    attributes: attributes,
-    popupTemplate: popupTemplate
-
- });
- graphicsLayer.add(polygonGraphic);
-
- });
-</script>
-</head>
-<body>
-  <div id="viewDiv"></div>
-</body>
+  <body>
+    <div id="viewDiv"></div>
+  </body>
 </html>
