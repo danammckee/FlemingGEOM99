@@ -1,9 +1,11 @@
 <!--https://developers.arcgis.com/javascript/latest/sample-code/layers-csv/-->
+<!--https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html-->
 <!--https://developers.arcgis.com/javascript/latest/sample-code/layers-custom-elevation-exaggerated/-->
 <!--https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-Symbol3D.html-->
 <!--https://developers.arcgis.com/javascript/latest/sample-code/visualization-point-styles/-->
 <!--https://www.esri.com/arcgis-blog/products/js-api-arcgis/mapping/take-advantage-of-the-javascript-symbol-playground/?rmedium=redirect&rsource=blogs.esri.com/esri/arcgis/2017/03/28/take-advantage-of-the-javascript-symbol-playground-->
 <!--https://developers.arcgis.com/documentation/mapping-apis-and-location-services/maps/graphics/-->
+<!--https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-SimpleRenderer.html-->
 
 <html>
   <head>
@@ -158,10 +160,11 @@
     <script src="https://js.arcgis.com/4.18/"></script>
 
     <script>
-      require(["esri/WebScene", "esri/layers/CSVLayer", "esri/views/SceneView"], function(
+      require(["esri/WebScene", "esri/layers/CSVLayer", "esri/views/SceneView", "esri/layers/support/LabelClass"], function(
         WebScene,
         CSVLayer,
-        SceneView
+        SceneView,
+		LabelClass
       ) {
         // If CSV files are not on the same domain as your website, a CORS enabled server
         // or a proxy is required.
@@ -176,23 +179,30 @@
           title: "Cities of Love",
           content: "{city} - {place}, {country}."
         };
-
+		
+		//Can change to a GeoJSON layer: https://developers.arcgis.com/javascript/latest/sample-code/layers-geojson/
         const csvLayer = new CSVLayer({
           url: url,
           copyright: "Dana McKee",
           popupTemplate: template
         });
 
+		//https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-Symbol.html//
+		//https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-SimpleRenderer.html//
+		//https://developers.arcgis.com/javascript/latest/sample-code/mars///
+		//https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-ObjectSymbol3DLayer.html
+		// Plan: Make cylinders/pins icons/objects for location
         csvLayer.renderer = {
-          type: "simple", // autocasts as new SimpleRenderer()
+          type: "simple", // autocasts as new SimpleRenderer(); MUST be set to SIMPLE for this?
           symbol: {
-            type: "point-3d", // autocasts as new PointSymbol3D()
-            // for this symbol we use 2 symbol layers, one for the outer circle
-            // and one for the inner circle
+            type: "point-3d", // autocasts as new PointSymbol3D() "picture-fill" "web-style"
+            // for this symbol a circle is used
             symbolLayers: [{
               type: "icon", // autocasts as new IconSymbol3DLayer()
               resource: { primitive: "circle"},
-              material: { color: [245, 144, 176, 1] },
+              material: { color: [245, 218, 220, 1] },
+			  outline: {color: [245, 144, 176, 0.5], 
+			  size: 5},
               size: 16
             }]
           }
@@ -275,8 +285,8 @@
 	 </div>
   
 	<div class="footer">
-		 <p class ="footertext">2021 Dana McKee GEOM 99</p>
-		 <p class ="footertext2"> <a href="https://danammckee.github.io/FlemingGEOM99/Week4/index.html" target="_blank">Return to Week 4</a> </p>
+		<p class ="footertext">2021 Dana McKee GEOM 99</p>
+		  <p class ="footertext2"> <a href="https://danammckee.github.io/FlemingGEOM99/Week4/index.html" target="_blank">Return to Week 4</a> </p>
 	 </div>
   
 </html>
