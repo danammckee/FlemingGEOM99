@@ -135,8 +135,9 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
  * [Exaggerated Earth](https://danammckee.github.io/FlemingGEOM99/Week4/ArcGIS/APIandJavaScript/ExaggeratedEarth.html)
  
 ### **Tutorial 5 - Valentine's Day**
-  * [Valentine's Day](https://danammckee.github.io/FlemingGEOM99/Week4/ArcGIS/APIandJavaScript/valentinesday.html)
-  * [VDay](https://danammckee.github.io/FlemingGEOM99/Week4/ArcGIS/APIandJavaScript/vday.html)
+   * [Love Around the World](https://danammckee.github.io/FlemingGEOM99/Week4/ArcGIS/APIandJavaScript/vday.html)
+  * [Love - Saskatchewan, Canada](https://danammckee.github.io/FlemingGEOM99/Week4/ArcGIS/APIandJavaScript/valentinesday.html)
+
 
 
 
