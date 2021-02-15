@@ -83,7 +83,7 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
 
 ### **Course 2 - Creating and Sharing GIS Content Using ArcGIS Online**
 
-* Complete the [Creating and Sharing GIS Content Using ArcGIS Online course](https://www.esri.com/training/catalog/5d816c0255cf937306d2d3ef/arcgis-online-basics/)
+* Complete the [Creating and Sharing GIS Content Using ArcGIS Online course(https://www.esri.com/training/catalog/5d816c0255cf937306d2d3ef/arcgis-online-basics/)
 ![Certificate](https://danammckee.github.io/FlemingGEOM99/images/Creating_and_Sharing_GIS_Content_Using ArcGIS_Online_Certificate.JPG)
 * [Certificate Link](https://www.esri.com/training/TrainingRecord/Certificate/damcke@flemingcollege.ca_Fleming/601f0b4581d6fb19c1d300b9/300)
 
@@ -106,12 +106,12 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
 
 ## **Task 1: ArcGIS Online Developers Website**
 
-* ArcGIS Developers [Website]( https://developers.arcgis.com/)
+* [ArcGIS Developers Website]( https://developers.arcgis.com/)
 
 ## **Task 2 - Generate a Layer on the ArcGIS Online Developers Website**
 
 * [Tree Collection WebMap](https://da9vbapdo7iu6xkf.maps.arcgis.com/home/item.html?id=1c793f0785a24ba89ad2e4d8bc69558b)
-* [Tree Collection Feature Layer Item ID URL(https://da9vbapdo7iu6xkf.maps.arcgis.com/home/item.html?id=d919060f9acb484095eb1a048ef2d62c)
+* [Tree Collection Feature Layer Item ID URL](https://da9vbapdo7iu6xkf.maps.arcgis.com/home/item.html?id=d919060f9acb484095eb1a048ef2d62c)
 * [Tree Collection REST URL](https://services3.arcgis.com/sXzWIJPFn9VCHK8j/arcgis/rest/services/tree_collection/FeatureServer)
 
 ## **Task 3 - Introduction to ArcGIS Online REST and Token Security**
