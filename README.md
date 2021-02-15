@@ -41,7 +41,7 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
 
 ## **[Week 2 Tasks](https://danammckee.github.io/FlemingGEOM99/Week2/index.html)**
 
-## **Task 2: Google Javascript API**
+## **Task 1: Google Javascript API**
 
 ### **Tutorial 1 - Adding a Google Map**
 
@@ -66,7 +66,74 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
   * [Heatmap](https://danammckee.github.io/FlemingGEOM99/Week2/GMaps/tutorial3c.html)
     * https://danammckee.github.io/FlemingGEOM99/Week2/GMaps/tutorial3c.html
 
-## **Task 1 - Create a Single HTML5 Page Using Google Map Technology**
+## **Task 2 - Create a Single HTML5 Page Using Google Map Technology**
 
 * [Ski Hills of Brtish Columbia](https://danammckee.github.io/FlemingGEOM99/Week2/GMaps/bcskihills.html)
   * https://danammckee.github.io/FlemingGEOM99/Week2/GMaps/bcskihills.html
+  
+ ## **[Week 3 Tasks](https://danammckee.github.io/FlemingGEOM99/Week3/index.html)**
+
+## **Task 1: ArcGIS Courses**
+
+### **Course 1 - ArcGIS Online Basics**
+
+* Complete the [ArcGIS Online Basics course](https://www.esri.com/training/catalog/5d816c0255cf937306d2d3ef/arcgis-online-basics/)
+![Certificate](https://danammckee.github.io/FlemingGEOM99/images/ArcGIS_Online_Basics_Certificate.JPG)
+* [Certificate Link](https://www.esri.com/training/TrainingRecord/Certificate/damcke@flemingcollege.ca_Fleming/601b94051d7e0c1f497095a3/300)
+
+### **Course 2 - Creating and Sharing GIS Content Using ArcGIS Online**
+
+* Complete the [Creating and Sharing GIS Content Using ArcGIS Online course](https://www.esri.com/training/catalog/5d816c0255cf937306d2d3ef/arcgis-online-basics/)
+![Certificate](https://danammckee.github.io/FlemingGEOM99/images/Creating_and_Sharing_GIS_Content_Using ArcGIS_Online_Certificate.JPG)
+* [Certificate Link](https://www.esri.com/training/TrainingRecord/Certificate/damcke@flemingcollege.ca_Fleming/601f0b4581d6fb19c1d300b9/300)
+
+## **Task 2: Map Viewer**
+  
+ * Map Viewer Beta [LINK](https://www.esri.com/arcgis-blog/products/arcgis-online/mapping/web-maps-and-map-viewer-beta/)
+ * Map Viewer Beta May 2020 Update [LINK](https://www.esri.com/arcgis-blog/products/arcgis-online/mapping/try-out-the-new-map-viewer-beta/)
+  * Map Viewer Beta Latest Update [LINK](https://www.esri.com/arcgis-blog/products/arcgis-online/mapping/whats-new-in-map-viewer-beta-october-2020/)
+
+## **Task 3: What's New in ArcGIS Online**
+
+ * ArcGIS Online News [LINK](https://doc.arcgis.com/en/arcgis-online/reference/whats-new.htm)
+
+## **Task 4: JSON and Importing Data into Webmaps**
+
+ * [Stave Lake - ArcGIS Online WebMap](https://fleming.maps.arcgis.com/home/item.html?id=027a8446c84345fa99746d7971578ced)
+ * [Stave Lake Legacy GeoJSON](https://danammckee.github.io/FlemingGEOM99/Week3/stavelake.html)
+   
+## **[Week 4 Tasks](https://danammckee.github.io/FlemingGEOM99/Week4/index.html)**
+
+## **Task 1: ArcGIS Online Developers Website**
+
+* ArcGIS Developers [Website]( https://developers.arcgis.com/)
+
+## **Task 2 - Generate a Layer on the ArcGIS Online Developers Website**
+
+* [Tree Collection WebMap](https://da9vbapdo7iu6xkf.maps.arcgis.com/home/item.html?id=1c793f0785a24ba89ad2e4d8bc69558b)
+* [Tree Collection Feature Layer Item ID URL(https://da9vbapdo7iu6xkf.maps.arcgis.com/home/item.html?id=d919060f9acb484095eb1a048ef2d62c)
+* [Tree Collection REST URL](https://services3.arcgis.com/sXzWIJPFn9VCHK8j/arcgis/rest/services/tree_collection/FeatureServer)
+
+## **Task 3 - Introduction to ArcGIS Online REST and Token Security**
+* Tokens and Rest URLS
+
+## **Task 4 - JavaScript API Tutorials**
+
+### **Tutorial 1 - Display a Map**
+ * [Display a Map](https://danammckee.github.io/FlemingGEOM99/Week4/ArcGIS/APIandJavaScript/DisplayMap2.html)
+ 
+ ### **Tutorial 2 - Display your Location**
+ * [Display your Location](https://danammckee.github.io/FlemingGEOM99/Week4/ArcGIS/APIandJavaScript/DisplayLocation.html)
+ 
+  ### **Tutorial 3 - Add a Feature**
+ * [Add a Feature](https://danammckee.github.io/FlemingGEOM99/Week4/ArcGIS/APIandJavaScript/AddFeature.html)
+ 
+  ### **Tutorial 4 - Exaggerated Earth**
+ * [Exaggerated Earth](https://danammckee.github.io/FlemingGEOM99/Week4/ArcGIS/APIandJavaScript/ExaggeratedEarth.html)
+ 
+  ### **Tutorial 5 - Valentine's Day**
+  * [Valentine's Day](https://danammckee.github.io/FlemingGEOM99/Week4/ArcGIS/APIandJavaScript/valentinesday.html)
+
+
+
+
