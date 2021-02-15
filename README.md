@@ -79,15 +79,15 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
 
 * Complete the [ArcGIS Online Basics course](https://www.esri.com/training/catalog/5d816c0255cf937306d2d3ef/arcgis-online-basics/)
 
-![Certificate](https://danammckee.github.io/FlemingGEOM99/images/ArcGIS_Online_Basics_Certificate.JPG)
+![Certificate](https://danammckee.github.io/FlemingGEOM99/images/Certificate1.JPG)
 
 * [Certificate Link](https://www.esri.com/training/TrainingRecord/Certificate/damcke@flemingcollege.ca_Fleming/601b94051d7e0c1f497095a3/300)
 
 ### **Course 2 - Creating and Sharing GIS Content Using ArcGIS Online**
 
-* Complete the [Creating and Sharing GIS Content Using ArcGIS Online course(https://www.esri.com/training/catalog/5d816c0255cf937306d2d3ef/arcgis-online-basics/)
+* Complete the [Creating and Sharing GIS Content Using ArcGIS Online course](https://www.esri.com/training/catalog/5d816c0255cf937306d2d3ef/arcgis-online-basics/)
 
-![Certificate](https://danammckee.github.io/FlemingGEOM99/images/Creating_and_Sharing_GIS_Content_Using ArcGIS_Online_Certificate.JPG)
+![Certificate](https://danammckee.github.io/FlemingGEOM99/images/Certificate2.JPG)
 * [Certificate Link]
 
 (https://www.esri.com/training/TrainingRecord/Certificate/damcke@flemingcollege.ca_Fleming/601f0b4581d6fb19c1d300b9/300)
