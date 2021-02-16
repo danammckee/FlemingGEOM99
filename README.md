@@ -288,6 +288,7 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
 
  * [Stave Lake - ArcGIS Online WebMap](https://fleming.maps.arcgis.com/home/item.html?id=027a8446c84345fa99746d7971578ced)
  * [Stave Lake Legacy GeoJSON](https://danammckee.github.io/FlemingGEOM99/Week3/stavelake.html)
+ * [GeoJSON file/data](https://danammckee.github.io/FlemingGEOM99/Week3/maps.geojson)
    
 ## **[Week 4 Tasks](https://danammckee.github.io/FlemingGEOM99/Week4/index.html)**
 
