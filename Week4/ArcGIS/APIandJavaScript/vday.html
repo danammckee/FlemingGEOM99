@@ -6,6 +6,7 @@
 <!--https://www.esri.com/arcgis-blog/products/js-api-arcgis/mapping/take-advantage-of-the-javascript-symbol-playground/?rmedium=redirect&rsource=blogs.esri.com/esri/arcgis/2017/03/28/take-advantage-of-the-javascript-symbol-playground-->
 <!--https://developers.arcgis.com/documentation/mapping-apis-and-location-services/maps/graphics/-->
 <!--https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-SimpleRenderer.html-->
+<!--https://developers.arcgis.com/javascript/latest/sample-code/sceneview-background/-->
 
 <html>
   <head>
@@ -24,11 +25,11 @@
       }	  
 	  	  
 	  #viewDiv {
-		padding: 0;
-		height: 70%;
-		width: 70%;
+        padding: 0;
+        height: 70%;
+        width: 70%;
 		margin: auto;
-        	background-color: #F590B0;
+        background-color: #F590B0;
 		border-style: ridge;
 		border-width: 20px;
 		border-color: #F590B0;
@@ -77,11 +78,6 @@
 			}
 			
 			.bodywords2 {
-				font-size: 20px;
-				text-align: center;
-			}
-	    
-	    		.bodywords3 {
 				font-size: 15px;
 				text-align: center;
 			}
@@ -165,11 +161,11 @@
     <script src="https://js.arcgis.com/4.18/"></script>
 
     <script>
-      require(["esri/WebScene", "esri/layers/CSVLayer", "esri/views/SceneView", "esri/layers/support/LabelClass"], function(
+      require(["esri/WebScene", "esri/layers/CSVLayer", "esri/views/SceneView", "esri/layers/support/LabelClass", "esri/widgets/Legend"], function(
         WebScene,
         CSVLayer,
         SceneView,
-		LabelClass
+		LabelClass, Legend
       ) {
         // If CSV files are not on the same domain as your website, a CORS enabled server
         // or a proxy is required.
@@ -212,7 +208,7 @@
             }]
           }
         };
-
+		
         const map = new WebScene({
           portalItem: {
             id: "a467ef1140de4e88acf34d38df9fb869"
@@ -226,6 +222,17 @@
           qualityProfile: "high",
           map: map,
           alphaCompositingEnabled: true,
+		  environment: {
+		  // set a transparent background
+			background: {
+			type: "color",
+			color: [255, 254, 244,0]
+			},
+			// disable stars
+            starsEnabled: false,
+            // disable atmosphere
+            atmosphereEnabled: false
+          },
           highlightOptions: {
             fillOpacity: 0,
             color: "#ffffff"
@@ -238,7 +245,7 @@
         });
         view.environment.background = {
           type: "color",
-          color: [0, 0, 0, 0]
+          color: [245, 218, 220, 100]
         };
       });
     </script>
@@ -276,7 +283,7 @@
   
     	<div class="section">
 		<div>
-			<p class ="bodywords2"> Make sure to take a look here at the Canadian Love Special for special treat at 
+			<p class ="bodywords"> Make sure to take a look here at the Canadian Love Special for special treat at 
 			<a href=" https://danammckee.github.io/FlemingGEOM99/Week4/ArcGIS/APIandJavaScript/valentinesday.html" target="_blank">Love, Saskatchewan</a> </p>
 	 	</div>
 	 </div>
@@ -284,7 +291,7 @@
   
   	<div class="section">
 		<div>
-			<p class="bodywords3"> Note: The list of citites will continue to be updated! Check back 
+			<p class="bodywords2"> Note: The list of citites will continue to be updated! Check back 
 			for more Cities of Love!</p>
 	 	</div>
 	 </div>
