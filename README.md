@@ -73,7 +73,7 @@ Showcase the three pillars of Google Maps as a platform: Maps, Routes and Places
 * [Ski Hills of Brtish Columbia](https://danammckee.github.io/FlemingGEOM99/Week2/GMaps/bcskihills.html)
   * https://danammckee.github.io/FlemingGEOM99/Week2/GMaps/bcskihills.html
   
- ## **[Week 3 Tasks](https://danammckee.github.io/FlemingGEOM99/Week3/index.html)**
+## **[Week 3 Tasks](https://danammckee.github.io/FlemingGEOM99/Week3/index.html)**
 
 ## **Task 1: ArcGIS Courses**
 
