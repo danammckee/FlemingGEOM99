@@ -28,7 +28,7 @@
   esriConfig.apiKey = "AAPK54f20e954f7343399bd7c0e42a023312VNgDv6gWf1mdrUfvhQ0OGz6WhjpAgXaebJhOk-ixi4GgDFP3xfXr0U-xb9av0MR3";
 
   const map = new Map({
-    basemap: "arcgis-topographic" //Basemap layer service
+    basemap: "arcgis-imagery" //Basemap layer service
   });
 
   const view = new MapView({
@@ -59,20 +59,18 @@
 
  const simpleFillSymbol = {
     type: "simple-fill",
-    color: [225, 0, 0, 0.8],  // Orange, opacity 80%
+    color: [225, 0, 0, 0.8],  // Red, opacity 80%
     outline: {
         color: [153, 0, 0],
-        width: 3
+        width: 10
     }
  };
 
  const popupTemplate = {
     title: "{Name}",
-    content: "{Description}"
  }
  const attributes = {
-    Name: "Graphic",
-    Description: "Love"
+    Name: "Saskatechwan LOVES YOU!",
  }
 
  const polygonGraphic = new Graphic({
