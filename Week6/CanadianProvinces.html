@@ -131,7 +131,8 @@
 	  
 	  //https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleBar.html//
       const scalebar = new ScaleBar({
-        view: view
+        view: view,
+	unit: "metric"
       });
 
       view.ui.add(scalebar, "bottom-right");
