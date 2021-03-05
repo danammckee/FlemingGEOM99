@@ -11,7 +11,7 @@ Before you begin, head to AWS and obtain the
 
 ## **Create the DuckDNS**
 
-1. Obtain the 
+1. Obtain the Public IPv4 address from the AWS console under instances
 2. Head to DuckDNS at [https://www.duckdns.org/domains](https://www.duckdns.org/domains)
 3. c
 
